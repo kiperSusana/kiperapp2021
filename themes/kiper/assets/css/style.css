@@ -205,10 +205,20 @@ section{
     width: 46vw;
     top: -1.5vw;
 }
+.frameVideo {
+  position: absolute;
+    left: 7.2%;
+    width: 46vw;
+    top: -1.5vw;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.20);
+}
 
 .texto_what_kiper{
 	position: absolute;
-    top: 6vw;
+    top: 2vw;
     left: 60%;
     font-family: 'GothamMedium';
     font-weight: 700;
@@ -219,7 +229,7 @@ section{
 }
 .description_kiper{
 	position: absolute;
-    top: 16vw;
+    top: 12vw;
     left: 59.5vw;
     text-align: left;
     width: 21.99vw;
@@ -240,7 +250,7 @@ section{
 	position: absolute;
     width: 100%;
     height: 30vw;
-    top: 46vw;
+    top: 41vw;
 }
 .texto_two_kiper_movil{
         display: none;
@@ -265,12 +275,14 @@ section{
         /* visibility: visible; */
         display: block;
 	position: absolute;
-    width: 31.5%;
-    left: 34.1%;
-    top: 15vw;
+    width: 100%;
+    left: 50%;
+    top: 19vw;
     font-family: 'Gotham-Light';
     font-weight: 600;
-    font-size: 1.26vw;
+    font-size: 20px;
+    max-width: 620px;
+    transform: translateX(-50%);
 }
 
 .section_three_kiper{
@@ -291,10 +303,10 @@ section{
      max-width: 500px;
 }
 .boxImg--left {
-     left: 18%;
+     left: 14%;
 }
 .boxImg--right {
-     right: 18%;
+     right: 14%;
 }
 .boxImg img {
         display: block;
@@ -302,7 +314,7 @@ section{
 }
 .ico_one{
 	position: absolute;
-    left: 56.5%;
+    left: 60.5%;
     top: 7vw;
     width: 4vw;
 }
@@ -314,7 +326,7 @@ section{
         /* visibility: visible; */
         display: block;
 	position: absolute;
-    left: 56.5%;
+    left: 60.5%;
     text-align: left;
     top: 13vw;
     width: 28.7vw;
@@ -354,7 +366,7 @@ section{
 
 .ico_three{
 	position: absolute;
-    left: 18%;
+    left: 14%;
     width: 5vw;
 }
 .negrita_t{
@@ -373,7 +385,7 @@ section{
         /* visibility: visible; */
         display: block;
         position: absolute;
-    left: 18.5%;
+    left: 14%;
     top: 6vw;
     font-family: 'Gotham-Light';
     font-weight: 700;
@@ -404,7 +416,7 @@ section{
 }
 .ico_four{
 	position: absolute;
-    left: 18%;
+    left: 14%;
     width: 5vw;
     top: 10vw;
 
@@ -417,7 +429,7 @@ section{
         /* visibility: visible; */
         display: block;
         position: absolute;
-    left: 18.2%;
+    left: 14%;
     top: 16vw;
     width: 26.6%;
     font-family: 'Gotham-Light';
@@ -458,7 +470,7 @@ section{
 	position: relative;
 	width: 100%;
 	/* height: 36vw; */
-	height: 31vw;
+	height: 12vw;
 }
 .content_pregunta_movil{
         /* visibility: hidden; */
@@ -830,6 +842,16 @@ width: 70%;
                 width: 54vw;
                 top: -0.5vw;
         }
+        .frameVideo {
+          position: absolute;
+          left: 6%;
+          width: 54vw;
+          top: -0.5vw;
+          height: auto;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 6px 10px rgba(0,0,0, 0.20);
+        }
         .texto_what_kiper{
                 top: 0vw;
                 left: 67%;
@@ -837,7 +859,7 @@ width: 70%;
 
         }
         .description_kiper{
-                top: 16vw;
+                top: 12vw;
                 left: 67.5vw;
                 width: 27.55vw;
                 font-size: 2.5vw;
@@ -1030,7 +1052,7 @@ width: 70%;
 }
 .section_pregunta{
         /* height: 60vw; */
-        height: 65vw;
+        height: 45vw;
 }
 .content_pregunta{
         /* visibility: hidden; */

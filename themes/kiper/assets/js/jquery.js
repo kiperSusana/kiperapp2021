@@ -39,13 +39,17 @@ $(function(){
       ]
     });
     $('[data-check-btn]:checked + label').addClass('planesct__link--select');
+    $('[data-price="opcion-2"]').addClass('selPrice');
     $('[data-check-btn]').each(function(){
       var idCh = $(this).attr('id');
       // console.log(idCh);
       $('#'+idCh).click(function() {
         $('[data-check-btn] + label').removeClass('planesct__link--select');
+        $('[data-price]').removeClass('selPrice');
         if(this.checked) {
           $(this).next().addClass('planesct__link--select');
+          // console.log(idCh);
+          $('[data-price="'+idCh+'"]').addClass('selPrice');
         }
       });
     });
