@@ -1,0 +1,663 @@
+// Settings
+$imgR: '../img/';
+$fontR: '../fonts/';
+
+$rojo: #E53F28;
+$gris: #3D3D3D;
+$gris2: #F6F6F6;
+$azul: #50D4F1;
+$ama: #FACF38;
+$negro: #212529;
+$black: #000000;
+$white: #ffffff;
+
+// Mixin
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range){
+    font-size: $max-font-size;
+  }
+}
+// Display Flex
+@mixin displayFlex($disp, $direc, $justify, $items, $wrp) {
+  @include display($disp); @include flex-direction($direc); @include justify-content($justify); @include align-items($items); @include flex-wrap($wrp);
+}
+
+// Main
+// .questionSec {
+//   height: auto!important;
+// }
+.wow {
+  visibility: hidden; @include transform-origin(0 50%);
+}
+.containerSlide {
+  max-width: 100%!important; padding-right: 0!important; padding-left: 0!important;
+  @media all and (min-width: 992px) {
+    max-width: 960px!important; padding-right: 12p!important; padding-left: 12px!important;
+  }
+  @media all and (min-width: 1200px) {
+    max-width: 1140px!important;
+  }
+}
+.colsPad {
+  padding: 10px; @include box-sizing(border-box);
+}
+.planesct {
+  width: 100%; height: auto; padding: 0 0 20px; margin: 0 0 10px; position: relative; @include box-sizing(border-box);
+  &__car {
+    width: 100%; height: auto; padding: 0; margin: 0 0 20px; position: relative; overflow: hidden;
+    & .slick-slide {
+      padding: 10px 0; @include box-sizing(border-box); margin: 0 15px;
+    }
+  }
+  &__noslide {
+    width: 100%; height: auto; padding: 0; margin: 0 0 20px; position: relative;
+  }
+  &__only {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative; @include box-sizing(border-box); background-color: $gris2; box-shadow: 0px 4px 6px rgba($black, 0.25); border-radius: 20px; overflow: hidden; @include transition(all 300ms ease); @include displayFlex(flex, row, flex-start, center, wrap);
+    &--black {
+      & .planesct__title {
+        background-color: $negro;
+      }
+      &:hover {
+        box-shadow: 0 4px 8px rgba($negro, 0.75);
+      }
+      & .planesct__link {
+        background: $white; color: $rojo; border: 1px solid $rojo;
+        &:hover,
+        &:active {
+          color: $white; background: $rojo; border-color: $rojo;
+        }
+      }
+    }
+  }
+  &__box {
+    width: 100%; @include flex(0 0 auto); @include box-sizing(border-box); padding: 10px 0 0 0;
+    @media all and (min-width: 640px) {
+      width: 50%; @include flex(0 0 auto); @include box-sizing(border-box);
+    }
+  }
+  &__plan {
+    width: 100%; max-width: 343px; height: auto; padding: 0; margin: 0; position: relative; @include box-sizing(border-box); background-color: $gris2; box-shadow: 0px 4px 6px rgba($black, 0.25); border-radius: 20px; overflow: hidden; @include transition(all 300ms ease); opacity: 0.75;
+    &--rojo {
+      & .planesct__title {
+        background-color: $rojo;
+      }
+      &:hover {
+        box-shadow: 0 4px 8px rgba($rojo, 0.75);
+      }
+      & .planesct__link {
+        background: $white; color: $rojo; border: 1px solid $rojo;
+        &:hover,
+        &:active {
+          color: $white; background: $rojo; border-color: $rojo;
+        }
+      }
+    }
+    &--ama {
+      & .planesct__title {
+        background-color: $negro;
+      }
+      &:hover {
+        box-shadow: 0 4px 8px rgba($negro, 0.75);
+      }
+      & .planesct__link {
+        background: $white; color: $rojo; border: 1px solid $rojo;
+        &:hover,
+        &:active {
+          color: $white; background: $rojo; border-color: $rojo;
+        }
+      }
+    }
+    &--negro {
+      & .planesct__title {
+        background-color: $black;
+      }
+      &:hover {
+        box-shadow: 0 4px 8px rgba($black, 0.75);
+      }
+      & .planesct__link {
+        background: $rojo; color: $white; border: 1px solid $rojo;
+        &:hover,
+        &:active {
+          color: $white; background: $black; border-color: $black;
+        }
+      }
+    }
+    &--azul {
+      & .planesct__title {
+        background-color: $azul;
+      }
+      &:hover {
+        box-shadow: 0 4px 8px rgba($azul, 0.75);
+      }
+      & .planesct__link {
+        background: $white; color: $rojo; border: 1px solid $rojo;
+        &:hover,
+        &:active {
+          color: $white; background: $rojo; border-color: $rojo;
+        }
+      }
+    }
+    @media all and (min-width: 480px) {
+      opacity: 1;
+    }
+  }
+  &__title {
+    width: 100%; height: auto; padding: 10px 0; margin: 0; @include box-sizing(border-box); text-align: center; background-color: $rojo;
+    & h3 {
+      color: $white; margin: 0; padding: 0; text-align: center; @include fluid-type(12px, 40px, 320px, 1200px); font-family: 'Gotham-Light'; font-weight: 700;
+    }
+  }
+  &__mensual {
+    width: 100%; height: auto; display: block; text-align: center; @include fluid-type(9px, 16px, 320px, 1200px); color: $gris; font-family: 'Gotham-Light'; font-weight: 600; padding: 0; margin: 0 0 10px; line-height: 1;
+  }
+  &__monto {
+    width: 100%; height: auto; display: block; text-align: center; font-family: 'GothamMedium'; padding: 0; margin: 0; line-height: 1;
+    &--black {
+      color: $gris; margin-bottom: 15px; @include fluid-type(18px, 50px, 320px, 1200px);
+      @media all and (min-width: 992px) {
+        margin-bottom: 30px;
+      }
+    }
+    &--red {
+      color: $rojo; @include fluid-type(18px, 70px, 320px, 1200px);
+    }
+  }
+  &__usuario {
+    width: 100%; height: auto; padding: 15px 0; margin: 0; position: relative; @include box-sizing(border-box); display: block;
+  }
+  &__beneficios {
+    width: 100%; height: 100%; min-height: 450px; padding: 0 20px; margin: 0 0 20px; position: relative; @include box-sizing(border-box);
+    & ul {
+      padding: 0; margin: 0; @include display(flex); @include flex-direction(column); list-style-type: none;
+      & li {
+        list-style-type: none; text-align: left; @include fluid-type(9px, 16px, 320px, 1200px); color: $gris; padding: 5px 0; margin: 0; font-family: 'Gotham-Light'; font-weight: 600; @include box-sizing(border-box); border-bottom: 1px solid rgba($gris, 0.40);
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+    @media all and (min-width: 576px) {
+      min-height: 565px;
+    }
+    @media all and (min-width: 992px) {
+      min-height: 785px;
+    }
+  }
+  &__benefitsEdit {
+    width: 100%; height: auto; padding: 0 20px; margin: 0 0 20px; position: relative; @include box-sizing(border-box);
+    & ul {
+      padding: 0; margin: 0; @include display(flex); @include flex-direction(column); list-style-type: none;
+      & li {
+        list-style-type: none; text-align: left; @include fluid-type(12px, 13px, 320px, 1200px); color: $gris; padding: 5px 0 5px 20px; margin: 0; font-family: 'Gotham-Light'; font-weight: 600; @include box-sizing(border-box); border-bottom: 1px solid rgba($gris, 0.40); position: relative;
+        &:before {
+          content: '\f05d'; font-family: 'fontAwesome'; @include position(absolute, 2px null null 0); width: 15px; height: auto; font-size: rem(16px); text-align: center; color: $rojo; font-weight: normal;
+        }
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+    @media all and (min-width: 576px) {
+      // min-height: 565px;
+    }
+    @media all and (min-width: 992px) {
+      // min-height: 785px;
+    }
+  }
+  &__linkPlan {
+    color: $rojo; font-family: 'Gotham-Light'; font-weight: 600; text-decoration: none; cursor: pointer; @include transition(all 300ms ease); width: 100%; height: auto; padding: 0; margin: 0 0 10px; display: block; text-align: center;
+    &:hover,
+    &:active {
+      color: $black;
+    }
+  }
+  &__link {
+    width: 100%; height: 32px; padding: 0; margin: 0 0 20px; display: block; line-height: 1; background: #E53F28; border-radius: 15px; color: $white; font-family: 'Gotham-Light'; font-weight: 800; text-decoration: none; text-transform: uppercase; text-align: center; border: 0; line-height: 32px; @include fluid-type(9px, 15px, 320px, 1200px); @include box-sizing(border-box); @include transition(all 300ms); cursor: pointer;
+    &:hover,
+    &:active {
+      color: $white;
+    }
+    @media all and (min-width: 576px) {
+      height: 42px; line-height: 42px;
+    }
+  }
+  &__linkbox {
+    width: 50%; @include flex(0 0 auto); @include box-sizing(border-box); padding: 0 5px;
+  }
+  &__btns {
+    width: 100%; height: auto; padding: 0 25px; margin: 0; position: relative; @include box-sizing(border-box);
+    p {
+      color: $rojo; line-height: 1; margin: 0 0 20px; padding: 0;
+      & small {
+        font-size: 13px;
+      }
+    }
+    &--flex {
+      @include displayFlex(flex, column, flex-start, center, wrap);
+      @media all and (min-width: 640px) {
+        @include flex-direction(row);
+      }
+    }
+  }
+  &__divider {
+    width: 100%; max-width: 879px; height: 1px; background-color: rgba($gris, 0.40); margin: 0 auto; padding: 0;
+  }
+}
+.slick-current {
+  & .planesct__plan {
+    opacity: 1;
+  }
+}
+.btn-check {
+  &:checked {
+    & ~ .planesct__link {
+      color: $white; background: $rojo; border-color: $rojo;
+      &:after {
+        opacity: 0; visibility: hidden; z-index: -1;
+      }
+      &--select {
+        position: relative;
+        &:after {
+          content: '\f00c'; font-family: 'fontAwesome'; @include position(absolute, -5px -5px null null); background-color: $black; color: $white; font-weight: normal; text-align: center; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; @include transition(all 300ms ease 1s); opacity: 1; visibility: visible; z-index: 2;
+        }
+        @media all and (min-width: 640px) {
+          &:after {
+            width: 25px; height: 25px; line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+  &:disabled,
+  &[disabled] {
+    & + .planesct__link {
+      pointer-events: none; filter: none; opacity: .65;
+    }
+  }
+}
+
+// Contacto Form
+form {
+  & div.error-line {
+    @include position(absolute, -10px 10px null null); width: 20px; height: 20px; border-radius: 20px; z-index: 5; margin: 0; padding: 0; background-color: $rojo; line-height: 16px; text-align: center; color: $white;
+    &:after {
+      content: 'X'; font-size: rem(9px);
+    }
+  }
+  & input {
+    border: none; border-radius: 0;
+    &:focus {
+      outline: none!important;
+    }
+    &:focus-visible {
+      outline: none!important;
+    }
+  }
+  & textarea {
+    border: none; border-radius: 0;
+    &:focus {
+      outline: none!important;
+    }
+    &:focus-visible {
+      outline: none!important;
+    }
+  }
+}
+
+// BoxHome
+.boxservice {
+  width: 100%; height: auto; padding: 0; margin: 0; position: relative; @include box-sizing(border-box); @include displayFlex(flex, row, center, center, wrap);
+  &__scene {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative; overflow: hidden; @include box-sizing(border-box);
+    & img {
+      display: block; width: 100%; height: auto; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative;
+    }
+  }
+}
+.scene-1 {
+  & img {
+    @include position(absolute, 0 null null 0);
+    &:nth-child(1) { z-index: 1; }
+    &:nth-child(2) { z-index: 2; }
+    &:nth-child(3) { z-index: 3; }
+  }
+}
+.scene-2 {
+  & img {
+    @include position(absolute, 0 null null 0);
+    &:nth-child(1) { z-index: 1; }
+    &:nth-child(2) { z-index: 2; }
+    &:nth-child(3) { z-index: 3; }
+    &:nth-child(4) { z-index: 4; }
+    &:nth-child(5) { z-index: 5; }
+    &:nth-child(6) { z-index: 6; }
+  }
+}
+.scene-3 {
+  & img {
+    @include position(absolute, 0 null null 0);
+    &:nth-child(1) { z-index: 1; }
+    &:nth-child(2) { z-index: 3; }
+    &:nth-child(3) { z-index: 2; }
+    &:nth-child(4) { z-index: 4; }
+  }
+}
+.scene-4 {
+  & img {
+    @include position(absolute, 0 null null 0);
+    &:nth-child(1) { z-index: 1; }
+    &:nth-child(2) { z-index: 2; }
+    &:nth-child(3) { z-index: 3; }
+    &:nth-child(4) { z-index: 4; }
+  }
+}
+.scene-5 {
+  & img {
+    @include position(absolute, 0 null null 0);
+    &:nth-child(1) { z-index: 1; }
+    &:nth-child(2) { z-index: 2; }
+    &:nth-child(3) { z-index: 3; }
+    &:nth-child(4) { z-index: 4; }
+  }
+}
+.scene-6 {
+  & img {
+    @include position(absolute, 0 null null 0);
+    &:nth-child(1) { z-index: 1; }
+    &:nth-child(2) { z-index: 2; }
+    &:nth-child(3) { z-index: 3; }
+    &:nth-child(4) { z-index: 4; }
+    &:nth-child(5) { z-index: 5; }
+    &:nth-child(6) { z-index: 6; }
+  }
+}
+
+// Prueba ahora Section
+.ctFrm {
+  width: 100%; height: auto; padding: 0; margin: 50px 0 30px; @include box-sizing(border-box); position: relative;
+}
+.frmInicia {
+  width: 100%; height: auto; padding: 0; margin: 30px 0 30px; @include box-sizing(border-box); position: relative;
+  &__title {
+    color: $black; margin: 0; padding: 0; text-align: center; @include fluid-type(16px, 26px, 320px, 1200px); font-family: 'GothamMedium'; font-weight: 700; 
+  }
+  &__alerta {
+    margin: 6px 0 0!important; padding: 10px!important; font-family: 'Gotham-Light'; font-weight: 400;
+    & small {
+      font-size: rem(12px);
+    }
+  }
+  &__label {
+    text-align: left; display: block; margin: 0 0 10px; font-family: 'Gotham-Light'; font-weight: 700;
+  }
+  & .inputStyle {
+    position: relative;
+    & input {
+      display: inline-block; border-width: 1px; border-style: solid; border-radius: 0; border-color: $black; font-family: 'Gotham-Light'; font-weight: 400;
+      &:focus {
+        color: #212529; background-color: #fff; border-color: $ama; outline: 0; box-shadow: 0 0 0 2px rgba($ama, 0.25);
+      }
+    }
+    & select {
+      border-width: 1px; border-style: solid; border-radius: 0; border-color: $black; font-family: 'Gotham-Light'; font-weight: 400;
+      &:focus {
+        color: #212529; background-color: #fff; border-color: $ama; outline: 0; box-shadow: 0 0 0 2px rgba($ama, 0.25);
+      }
+    }
+  }
+}
+
+.playImg {
+  @include position(absolute, 58vw null null 5.2%); display: block; width: 100%; max-width: 100px; height: auto; padding: 0; margin: 0;
+  @media all and (min-width: 768px) {
+    max-width: 150px; top: 31vw; left: 6.2%; max-width: 150px;
+  }
+}
+
+// 404 section
+.error-404 {
+  width: 100%; height: auto; border-top: 1px solid rgba($gris, 0.25); padding: 40px 0 80px; margin: 40px 0 0; @include box-sizing(border-box); position: relative; overflow: hidden; background-image: url('#{$imgR}bgvector.svg'); background-position: bottom; background-size: cover; background-repeat: no-repeat;
+  & .icon404 {
+    width: 100%; height: auto; padding: 0; margin: 0 0 25px; position: relative;
+    & img {
+      width: 100%; max-width: 200px; height: auto; padding: 0; margin: 0 auto; display: block;
+    }
+  }
+}
+.btnGen404 {
+  width: 100%; height: auto; padding: 0; margin: 40px 0 0; @include box-sizing(border-box); position: relative; overflow: hidden; text-align: center;
+  & a {
+    display: block; width: 250px; height: 40px; border-radius: 12px; line-height: 40px; text-align: center; border: none; background-color: $rojo; @include box-sizing(border-box); margin: 0 auto; padding: 0; position: relative; color: $white; font-size: rem(15px); cursor: pointer; text-decoration: none; text-transform: uppercase;
+    // &:after {
+    //   content: '\f054'; font-family: 'fontAwesome'; margin-left: 8px;
+    // }
+  }
+}
+// Box Kiper Blog
+.blogSec {
+  width: 100%; height: auto; border-top: 1px solid rgba($gris, 0.25); padding: 40px 0 80px; margin: 40px 0 0; @include box-sizing(border-box); position: relative; overflow: hidden; background-image: url('#{$imgR}bgvector.svg'); background-position: bottom; background-size: cover; background-repeat: no-repeat;
+  &__main {
+    position: relative; z-index: 3;
+  }
+  &__hr {
+    border-top: 2px solid #8B90A3; margin-top: 50px; margin-bottom: 50px;
+  }
+  & .graphic {
+    width: 400px; height: auto; display: block; @include position(absolute, null 0 100px null);
+  }
+  & .posts-navigation {
+    margin-top: 30px;
+    & a {
+      display: block; width: 250px; height: 40px; border-radius: 12px; line-height: 40px; text-align: center; border: none; background-color: $rojo; @include box-sizing(border-box); margin: 0 auto; padding: 0; position: relative; color: $white; font-size: rem(15px); cursor: pointer; text-decoration: none; text-transform: uppercase;
+      // &:after {
+      //   content: '\f054'; font-family: 'fontAwesome'; margin-left: 8px;
+      // }
+    }
+  }
+  &__btnreturn {
+    width: 100%; height: auto; padding: 0; margin: 40px 0 0; @include box-sizing(border-box); position: relative; z-index: 3;
+    & a {
+      display: block; width: 250px; height: 40px; border-radius: 12px; line-height: 40px; text-align: center; border: none; background-color: $rojo; @include box-sizing(border-box); margin: 0 auto; padding: 0; position: relative; color: $white; font-size: rem(15px); cursor: pointer; text-decoration: none; text-transform: uppercase;
+      // &:after {
+      //   content: '\f054'; font-family: 'fontAwesome'; margin-left: 8px;
+      // }
+    }
+  }
+  @media all and (min-width: 768px) {
+    & .graphic {
+      width: 300px;
+    }
+  }
+  @media all and (min-width: 99px) {
+    & .graphic {
+      width: 400px;
+    }
+  }
+}
+.boxBlog {
+  width: 100%; height: auto; padding: 0; margin: 0 0 25px; position: relative; @include displayFlex(flex, column, flex-start, flex-start, wrap); @include box-sizing(border-box);
+  &__image {
+    width: 100%; height: 190px; @include box-sizing(border-box); padding: 0; margin: 0 0 25px; position: relative; overflow: hidden; border-radius: 8px;
+    & img {
+      display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover"; position: relative; @include transform(scale(1.0)); @include transition(transform 900ms ease-in-out);
+    }
+    @media all and (min-width: 640px) {
+      height: 300px;
+    }
+  }
+  &__desc {
+    width: 100%; height: auto; @include box-sizing(border-box); padding: 0; margin: 0; color: $gris;
+    & h4 {
+      @include fluid-type(16px, 26px, 320px, 1200px); margin: 0 0 10px; padding: 0; line-height: 1; font-family: 'GothamMedium'; font-weight: 700; text-align: left;
+      & a {
+        color: $gris; @include transition(all 300ms ease); text-decoration: none;
+        &:hover {
+          color: $rojo;
+        }
+      }
+    }
+    & .rte {
+      width: 100%; height: auto; padding: 0; margin: 0 0 15px; text-align: left; font-family: 'Gotham-Light'; font-weight: 400;
+      & h1, & h2, & h3, & h4, & h5, & h6 {
+        font-family: 'GothamMedium'; font-weight: 600;
+        & strong {
+          font-weight: 700;
+        }
+      }
+      & ul {
+        & li { 
+          @include fluid-type(12px, 15px, 320px, 1200px); line-height: 1.2;
+          & a {
+            @include fluid-type(12px, 15px, 320px, 1200px); line-height: 1.2; text-decoration: none; font-family: 'GothamMedium'; font-weight: 500;
+          }
+        }
+      }
+      & p {
+        margin: 0; padding: 0; @include fluid-type(12px, 15px, 320px, 1200px); line-height: 1.2;
+      }
+    }
+  }
+  &__divider {
+    width: 100%; margin: 25px 0; padding: 0; height: 1px; background-color: rgba($black, 0.30);
+  }
+  &__tags {
+    width: 100%; margin: 0 0 10px; padding: 0; height: auto; @include box-sizing(border-box); position: relative;
+    & .tagger {
+      margin: 0; padding: 0; @include displayFlex(flex, row, flex-start, center, wrap);
+      & a {
+        margin: 0 0 8px; padding: 0; @include fluid-type(12px, 16px, 320px, 1200px); text-decoration: none; position: relative; @include box-sizing(border-box); color: $gris; font-family: 'Gotham-Light'; font-weight: 400; @include transition(all 300ms ease);
+        &:hover {
+          color: $rojo;
+        }
+        &:after {
+          content: '/'; margin: 0 8px;
+        }
+        &:last-child {
+          &:after {
+            content: '/'; margin: 0 8px; display: none;
+          }
+        }
+      }
+    }
+  }
+  &__date {
+    width: 100%; height: auto; margin: 0; padding: 0; line-height: 1; text-align: left;
+    & i {
+      margin-right: 0;
+    }
+    & .fecha {
+      margin: 0; padding: 0; @include fluid-type(10px, 13px, 320px, 1200px); text-align: left; float: left;
+    }
+  }
+  &__link {
+    display: block; margin: 0; padding: 0; color: $gris; @include position(absolute, 0 null null 0); text-decoration: none; font-size: 0; text-indent: -9999px; opacity: 0; z-index: 1; width: 100%; height: 100%;;
+  }
+  &--ajax {
+    margin: 0 0 25px; padding: 0;
+    @media all and (min-width: 640px) {
+      margin: 0 0 40px;
+    }
+    @media all and (min-width: 768px) {
+      margin: 0 0 60px; padding: 0 10px;
+    }
+    @media all and (min-width: 992px) {
+      margin: 0 0 80px; padding: 0 20px;
+    }
+    @media all and (min-width: 1024px) {
+      margin: 0 0 100px;
+    }
+  }
+  &--small {
+    margin: 0 0 10px; padding: 0;
+    & .boxBlog__image {
+      height: 130px; margin: 0 0 10px;
+    }
+    & .boxBlog__desc {
+      & h4 {
+        @include fluid-type(13px, 16px, 320px, 1200px); margin: 0 0 10px;
+      }
+    }
+    @media all and (min-width: 768px) {
+      padding: 0 15px 0 0; margin: 0 0 15px;
+    }
+    @media all and (min-width: 992px) {
+      padding: 0 30px 0 0; margin: 0 0 20px;
+    }
+    @media all and (min-width: 1024px) {
+      padding: 0 40px 0 0; margin: 0 0 25px;
+    }
+  }
+  &--bigimg {
+    & .boxBlog__image {
+      height: 300px;
+    }
+    & .boxBlog__desc {
+      & .rte {
+        & p {
+          margin: 0 0 15px;
+        }
+      }
+    }
+    @media all and (min-width: 768px) {
+      & .boxBlog__image {
+        height: 350px;
+      }
+    }
+    @media all and (min-width: 992px) {
+      & .boxBlog__image {
+        height: 400px;
+      }
+    }
+  }
+}
+.popularesCt {
+  width: 100%; height: auto; padding: 0; margin: 0; @include box-sizing(border-box); position: relative;
+  & h2 {
+    @include fluid-type(16px, 24px, 320px, 1200px); margin: 0; padding: 0; line-height: 1; font-family: 'GothamMedium'; font-weight: 700; text-align: left;
+  }
+  & h5 {
+    @include fluid-type(13px, 16px, 320px, 1200px); margin: 0 0 20px; padding: 0; line-height: 1; font-family: 'Gotham-Light'; font-weight: 400; text-align: left;
+  }
+  &__news {
+    width: 100%; height: auto; padding: 0; margin: 0; @include box-sizing(border-box); position: relative;
+  }
+}
+.alm-btn-wrap {
+  width: 100%; height: auto; padding: 0; margin: 60px 0 0; position: relative; @include box-sizing(border-box);
+}
+.ctAjax__btn {
+  display: block; width: 250px; height: 40px; border-radius: 12px; line-height: 40px; text-align: center; border: none; background-color: $rojo; @include box-sizing(border-box); margin: 0 auto; padding: 0; position: relative; color: $white; font-size: rem(15px); cursor: pointer; text-transform: uppercase;
+  // &:after {
+  //   content: '\f078'; font-family: 'fontAwesome'; margin-left: 8px;
+  // }
+  &:disabled {
+    opacity: 0.35; cursor: none; pointer-events: none;
+  }
+}
+
+.page-header {
+  width: 100%; height: auto; padding: 0; margin: 0 0 35px; position: relative; @include box-sizing(border-box);
+}
+.page-title {
+  @include fluid-type(20px, 32px, 320px, 1200px); margin: 0; padding: 0; line-height: 1; font-family: 'GothamMedium'; font-weight: 700; text-align: left; color: $gris;
+}
+.formNews {
+  width: 100%; height: auto; padding: 0; margin: 20px 0; position: relative; overflow: hidden; text-align: center;
+  & .inputNews {
+    width: 100%; border: 0; outline: 0; padding: 5px 8px; border: 2px solid $gris!important; box-shadow: none; background-color: $white!important; border-radius: 8px!important; @include fluid-type(13px, 16px, 320px, 1200px); margin-bottom: 20px;
+  }
+  & .inputBtn {
+    width: 100%; height: 40px; padding: 0 30px; margin: 0; text-transform: uppercase; text-align: center; color: $white; display: inline-block; border: 1px solid $rojo; @include box-sizing(border-box); font-size: rem(16px); cursor: pointer; position: relative; overflow: hidden; border-radius: 12px; background-color: $rojo !important; @include transition(all 0.23s); box-shadow: 0 0 5px rgba($black, 0.25);
+    &:hover {
+        background-color: $ama!important; color: $white; border: 1px solid $ama;
+    }
+  }
+  & .wpcf7-spinner {
+    @include position(absolute, null null 5px 50%); @include transform(translateX(-50%)); margin: 0;
+  }
+}

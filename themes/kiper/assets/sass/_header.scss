@@ -1,0 +1,51 @@
+.headerGen {
+  width: 100%; height: auto; position: relative; padding: 20px 0; margin: 0; background-color: $white; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15); @include box-sizing(border-box); z-index: 100;
+}
+.brand {
+  width: 100%; height: auto; padding: 0; margin: 0;
+  & img {
+    display: block; width: 100%; height: auto; max-width: 160px; margin: 0 auto 0 0; padding: 0;
+  }
+  & .site-title {
+    font-size: 0; text-indent: -9999px; color: $rojo; opacity: 0; margin: 0; padding: 0;
+  }
+}
+.menumain {
+  width: 100%; height: auto; padding: 0; margin: 0;
+  & nav {
+    width: 100%; height: auto; padding: 0; margin: 0;
+    & ul {
+      width: 100%; height: auto; list-style-type: none; padding: 0; margin: 0; @include display(flex); @include flex-direction(row); @include justify-content(flex-end); @include align-items(center);
+      & li {
+        list-style-type: none; padding: 0; margin: 0 30px 0 0;
+        & a {
+          margin: 0; padding: 0; color: $gris; font-family: 'GothamMedium'; text-decoration: none; @include transition(all 300ms); @include fluid-type(14px, 16px, 320px, 1200px);
+          &:hover {
+            color: $rojo;
+          }
+        }
+        &.mainItem {
+          & a {
+            margin: 0; padding: 5px 15px; color: $white; @include transition(all 300ms); @include fluid-type(13px, 14px, 320px, 1200px); background-color: $rojo; display: inline-block; width: auto; height: auto; text-transform: uppercase; border-radius: 12px; border: 1px solid $rojo;
+            &:hover {
+              color: $rojo; background-color: $white;
+            }
+          }
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+.btnHeader {
+  width: 100%; height: auto; padding: 0; margin: 0; text-align: right;
+  &__link {
+    width: auto; height: 32px; padding: 0 20px; margin: 0; display: inline-block; line-height: 1; background: #E53F28; border-radius: 16px; color: $white; font-family: 'Gotham-Light'; font-weight: 800; text-decoration: none; text-transform: uppercase; text-align: center; border: 0; line-height: 32px; font-size: rem(13px);
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+}

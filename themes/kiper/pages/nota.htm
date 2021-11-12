@@ -1,0 +1,84 @@
+title = "Nota"
+url = "/nota"
+layout = "layout"
+is_hidden = 0
+==
+
+<article class="bg-gen"> 
+  <section class="blogSec">
+    <div class="blogSec__main">
+			
+
+						<div class="container">
+              <div class="row justify-content-center">
+								
+                <div class="col-md-9">
+									<div class="row">
+                    <div id="post-1" class="col-12">
+                      <div class="boxBlog boxBlog--bigimg">
+                        <div class="boxBlog__image">
+                          <img src="{{ 'assets/img/imgprueba/image_grande_post.png'|theme }}" alt="Título">
+                        </div>
+												<div class="boxBlog__tags">
+													<nav class="tagger">
+                            <a href="">tag 1</a>
+                            <a href="">tag 1</a>
+                            <a href="">tag 1</a>
+													</nav><!-- end.tagger -->
+												</div><!-- end.boxBlog__tags -->
+                        <div class="boxBlog__desc">
+                          <h4>Título</h4>
+                          <div class="boxBlog__divider"></div>
+                          <div class="rte">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus blanditiis unde reiciendis architecto nihil expedita quas, ratione nemo officia voluptates nam optio animi corrupti alias ad laborum quibusdam enim!</p>
+                          </div>
+                          <div class="boxBlog__date">
+                            <p class="fecha"><i class="fa fa-calendar"></i> noviembre 9, 2021</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- #post-1 -->
+									</div>
+                </div><!-- end.col-* -->
+                <div class="col-md-3">
+                  <div class="popularesCt">
+                    <h2>¡Hola!</h2>
+                    <hr>
+                    <h5>Post Populares</h5>
+
+                    <div class="boxBlog boxBlog--small">
+                      <div class="boxBlog__image">
+                        <img src="{{ 'assets/img/imgprueba/image_grande_post.png'|theme }}" alt="Título">
+                          <a href="{{ ''|page }}" class="boxBlog__link">Leer más</a>
+                      </div>
+                      <div class="boxBlog__desc">
+                        <h4><a href="{{ ''|page }}"><?php the_title(); ?></a></h4>
+                      </div><!-- end.boxBlog__image -->
+                    </div><!-- end.boxBlog -->
+
+                    <hr>
+                    <div class="popularesCt__news">
+                      <h2>Únete a nuestro newsletter</h2>
+											<div class="formNews">
+                        <form action="">
+                          <input type="email" class="inputNews" required name="email" id="email" placeholder="Tu email">
+                          <input type="submit" class="inputBtn" value="Enviar">
+                        </form>
+                      </div>
+                    </div>
+                  </div><!-- end.popularesCt -->
+									
+                </div><!-- end.col-* -->
+								<div class="col-12">
+									<div class="blogSec__btnreturn">
+										<a href="{{ 'inicio'|page }}">Regresar a Inicio</a>
+									</div>
+								</div>
+              </div><!-- end.row --> 
+            </div><!-- end.container -->
+
+
+		</div><!-- end.blogSec__main -->
+		<img src="{{ 'assets/img/graphic.svg'|theme }}" alt="Grafico Kiper" class="graphic">
+	</section><!-- end.blogSec -->
+</article><!-- #post-<?php the_ID(); ?> -->

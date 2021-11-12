@@ -1,0 +1,28 @@
+{
+  "name": "october/kiper",
+  "type": "kiper-theme",
+  "description": "Kiper theme",
+  "keywords": ["october", "cms", "kiper", "theme"],
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Jorge Malagón",
+          "email": "jorge@kiper.app",
+          "role": "Front-End Sr"
+      },
+      {
+          "name": "Leslye Perez",
+          "email": "leslye@gconcepthaus.mx",
+          "role": "Back-End Sr"
+      }
+  ],
+  "require": {
+      "php": ">=5.4",
+      "composer/installers": "~1.0"
+  },
+  "extra": {
+      "branch-alias": {
+          "dev-master": "1.0-dev"
+      }
+  }
+}

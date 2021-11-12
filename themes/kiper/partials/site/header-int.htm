@@ -1,0 +1,39 @@
+description = "Header Interno"
+
+[viewBag]
+snippetCode = "header-interno"
+snippetName = "Header Interno"
+==
+
+<header class="headerGen">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-4 col-md-4">
+        <div class="brand">
+          <a href="{{'inicio'|page}}">
+            <img src="{{ 'assets/img/kiper.svg'|theme }}" alt="Kiper">
+            <h1 class="site-title">Kiper</h1>
+          </a>
+        </div><!-- end.brand -->
+      </div><!-- end.col-* -->
+      <div class="col-md-8 d-none d-md-block">
+        <div class="menumain">
+          <nav>
+            <ul>
+              <li><a class="link" href="{{'inicio'|page}}/#section_kiper">¿Qué es Kiper?</a></li>
+              <li><a href="{{'inicio'|page}}/#section_three_kiper">Funciones</a></li>
+              <li><a href="{{'inicio'|page}}/#content_planes">Planes</a></li>
+              <li><a href="{{'blog-kiper'|page}}">Blog</a></li>
+              <li class="mainItem"><a href="{{'inicia-prueba'|page}}">Probar ahora</a></li>
+            </ul><!-- end.ul -->
+          </nav><!-- end.nav -->
+        </div><!-- end.menumain -->
+      </div><!-- end.col-* -->
+      <div class="col-8 d-block d-md-none">
+        <div class="btnHeader">
+          <a class="btnHeader__link" href="{{'inicia-prueba'|page}}">Probar ahora</a>
+        </div>
+      </div>
+    </div><!-- end.row -->
+  </div><!-- end.container -->
+</header><!-- end.headerGen -->
