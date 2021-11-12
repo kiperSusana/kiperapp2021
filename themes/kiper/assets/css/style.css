@@ -38,7 +38,7 @@ section{
     /* left: 0%; */
     text-align: left;
     left: 7vw;
-    top: 9vw;
+    top: 5vw;
     font-family: 'GothamMedium';
     font-weight: 700;
     font-size: 3.5vw;
@@ -51,7 +51,7 @@ section{
 .herramienta{
 	position: absolute;
     left: 7.2%;
-    top: 23vw;
+    top: 19vw;
     text-align: start;
     font-family: 'Gotham-Light';
     font-size: 1.7vw;

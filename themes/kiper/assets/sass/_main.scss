@@ -409,7 +409,7 @@ form {
     & input {
       display: inline-block; border-width: 1px; border-style: solid; border-radius: 0; border-color: $black; font-family: 'Gotham-Light'; font-weight: 400;
       &:focus {
-        color: #212529; background-color: #fff; border-color: $ama; outline: 0; box-shadow: 0 0 0 2px rgba($ama, 0.25);
+        color: #77828d; background-color: #fff; border-color: $ama; outline: 0; box-shadow: 0 0 0 2px rgba($ama, 0.25);
       }
     }
     & select {
@@ -427,7 +427,7 @@ form {
     width: 100%; height: auto; padding: 0; margin: 0; border: 0; display: block;
   }
   @media all and (min-width: 768px) {
-    max-width: 190px; top: 31vw; left: 6.3%;
+    max-width: 190px; top: 27vw; left: 6.3%;
   }
 }
 
