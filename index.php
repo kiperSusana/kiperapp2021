@@ -1,4 +1,5 @@
 <?php
+error_log(print_r($variable, TRUE)); 
 /**
  * October - The PHP platform that gets back to basics.
  *
