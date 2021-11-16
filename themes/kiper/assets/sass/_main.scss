@@ -430,6 +430,15 @@ form {
     max-width: 190px; top: 27vw; left: 6.3%;
   }
 }
+.btnHero {
+  @include position(absolute, 58vw null null 5.5%); display: block; width: 250px; height: 40px; border-radius: 12px; line-height: 40px; text-align: center; border: none; background-color: $rojo; @include box-sizing(border-box); margin: 0 auto; padding: 0; color: $white; font-size: rem(15px); cursor: pointer; text-decoration: none; text-transform: uppercase; font-family: 'Gotham-Light'; font-weight: 800;
+  &:hover {
+    color: $white;
+  }
+  @media all and (min-width: 768px) {
+    top: 33vw; left: 6.3%;
+  }
+}
 
 // 404 section
 .error-404 {
