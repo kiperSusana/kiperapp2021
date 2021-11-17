@@ -1,43 +1,22 @@
 title = "Nota"
-url = "/nota"
+url = "/nota/:slug"
 layout = "layout"
 is_hidden = 0
-==
 
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog-kiper"
+==
 <article class="bg-gen"> 
   <section class="blogSec">
     <div class="blogSec__main">
 			
-
 						<div class="container">
               <div class="row justify-content-center">
 								
                 <div class="col-md-9">
 									<div class="row">
-                    <div id="post-1" class="col-12">
-                      <div class="boxBlog boxBlog--bigimg">
-                        <div class="boxBlog__image">
-                          <img src="{{ 'assets/img/imgprueba/image_grande_post.png'|theme }}" alt="Título">
-                        </div>
-												<div class="boxBlog__tags">
-													<nav class="tagger">
-                            <a href="">tag 1</a>
-                            <a href="">tag 1</a>
-                            <a href="">tag 1</a>
-													</nav><!-- end.tagger -->
-												</div><!-- end.boxBlog__tags -->
-                        <div class="boxBlog__desc">
-                          <h4>Título</h4>
-                          <div class="boxBlog__divider"></div>
-                          <div class="rte">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem temporibus blanditiis unde reiciendis architecto nihil expedita quas, ratione nemo officia voluptates nam optio animi corrupti alias ad laborum quibusdam enim!</p>
-                          </div>
-                          <div class="boxBlog__date">
-                            <p class="fecha"><i class="fa fa-calendar"></i> noviembre 9, 2021</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div><!-- #post-1 -->
+                    {% component 'blogPost' %}
 									</div>
                 </div><!-- end.col-* -->
                 <div class="col-md-3">

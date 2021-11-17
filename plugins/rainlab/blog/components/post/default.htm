@@ -1,0 +1,36 @@
+{% set post = __SELF__.post %}
+
+<div id="post-1" class="col-12">
+  <div class="boxBlog boxBlog--bigimg">
+{% if post.featured_images.count %}
+    <div class="boxBlog__image">
+    {% for image in post.featured_images %}
+        <img
+            data-src="{{ image.filename }}"
+            src="{{ image.path }}"
+            alt="{{ image.description }}"
+            style="max-width: 100%" />
+    {% endfor %}
+    </div>
+{% endif %}
+    {% if post.categories.count %}
+    <div class="boxBlog__tags">
+      <nav class="tagger">
+      {% for category in post.categories %}
+        <a href="{{ category.url }}">{{ category.name }}</a>
+      {% endfor %}
+      </nav><!-- end.tagger -->
+    </div><!-- end.boxBlog__tags -->
+    {% endif %}
+    <div class="boxBlog__desc">
+      <h4>{{ post.title }}</h4>
+      <div class="boxBlog__divider"></div>
+      <div class="rte">
+        {{ post.content_html|raw }}
+      </div>
+      <div class="boxBlog__date">
+        <p class="fecha"><i class="fa fa-calendar"></i> {{ post.published_at|date('M d, Y') }}</p>
+      </div>
+    </div>
+  </div>
+</div><!-- #post-1 -->

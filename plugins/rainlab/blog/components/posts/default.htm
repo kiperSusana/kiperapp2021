@@ -1,0 +1,77 @@
+{% set posts = __SELF__.posts %}
+
+<div class="row">
+{% for post in posts %}
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="boxBlog boxBlog--ajax">
+  {% if post.featured_images.count %}
+      <div class="boxBlog__image">
+      {% for image in post.featured_images %}
+        <img src="{{ image.path }}" alt="{{ post.title }}">
+      {% endfor %}
+        <a href="{{ post.url }}" class="boxBlog__link">Leer más</a>
+      </div>
+  {% endif %}
+      <div class="boxBlog__desc">
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+        <!-- <div class="boxBlog__divider"></div> -->
+        <div class="rte">
+          <p>{{ post.summary|raw }}</p>
+        </div>
+        <div class="boxBlog__date">
+          <p class="fecha"><i class="fa fa-calendar"></i> {{ post.published_at|date('M d, Y') }}</p>
+        </div>
+      </div>
+    </div><!-- end.boxBlog -->
+  </div><!-- end.col-* -->
+{% else %}
+  <div class="col-8">
+    <div class="boxBlog boxBlog--ajax">
+      <div class="boxBlog__desc">
+        <div class="rte">
+          <p>{{ __SELF__.noPostsMessage }}</p>
+        </div>
+      </div>
+    </div><!-- end.boxBlog -->
+  </div>
+{% endfor %}
+</div><!-- end.row -->
+
+<!-- <ul class="post-list">
+    {% for post in posts %}
+        <li>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+            <p class="info">
+                Posted
+                {% if post.categories.count %} in {% endif %}
+                {% for category in post.categories %}
+                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                on {{ post.published_at|date('M d, Y') }}
+            </p>
+
+            <p class="excerpt">{{ post.summary|raw }}</p>
+        </li>
+    {% else %}
+        <li class="no-data">{{ __SELF__.noPostsMessage }}</li>
+    {% endfor %}
+</ul> -->
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (__SELF__.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

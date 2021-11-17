@@ -2,50 +2,53 @@ title = "Blog Kiper"
 url = "/blog"
 layout = "layout"
 is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 9
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog-kiper"
+postPage = "nota"
+
+[blogPosts blogPupulares]
+pageNumber = "{{ :page }}"
+categoryFilter = "populares"
+postsPerPage = 4
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog-kiper"
+postPage = "nota"
 ==
+{% set populares = blogPupulares.posts %}
 
 <section class="blogSec">
   <div class="blogSec__main">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-9">
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="boxBlog boxBlog--ajax">
-                <div class="boxBlog__image">
-                  <img src="{{ 'assets/img/imgprueba/image_post_dos.png'|theme }}" alt="Título de la nota">
-                  <a href="{{ 'nota'|page }}" class="boxBlog__link">Leer más</a>
-                </div>
-                <div class="boxBlog__desc">
-                  <h4><a href="{{ 'nota'|page }}">Título de la nota</a></h4>
-                  <!-- <div class="boxBlog__divider"></div> -->
-                  <div class="rte">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad autem perspiciatis excepturi qui pariatur harum, quasi tempora fugit quisquam dignissimos debitis minima odit eius assumenda, tenetur possimus. Nobis, laborum omnis!</p>
-                  </div>
-                  <div class="boxBlog__date">
-                    <p class="fecha"><i class="fa fa-calendar"></i> noviembre 9, 2021</p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- end.col-* -->
-          </div><!-- end.row -->
+          {% component 'blogPosts' %}
         </div><!-- end.col-* -->
         <div class="col-md-3">
           <div class="popularesCt">
             <h2>¡Hola!</h2>
             <hr>
             <h5>Post Populares</h5>
-
+        {% for popular in populares %}
             <div class="boxBlog boxBlog--small">
+          {% if popular.featured_images.count %}
               <div class="boxBlog__image">
-                <img src="{{ 'assets/img/imgprueba/image_grande_post.png'|theme }}" alt="Título nota">
-                <a href="{{ 'nota'|page }}" class="boxBlog__link">Leer más</a>
+              {% for image in popular.featured_images %}
+                <img src="{{ image.path }}" alt="{{ popular.title }}">
+              {% endfor %}
+                <a href="{{ popular.url }}" class="boxBlog__link">Leer más</a>
               </div>
+          {% endif %}
               <div class="boxBlog__desc">
-                <h4><a href="{{ 'nota'|page }}">Título nota</a></h4>
+                <h4><a href="{{ popular.url }}">{{popular.title}}</a></h4>
               </div><!-- end.boxBlog__image -->
             </div><!-- end.boxBlog -->
-
+        {% endfor %}
             <hr>
             <div class="popularesCt__news">
               <h2>Únete a nuestro newsletter</h2>
