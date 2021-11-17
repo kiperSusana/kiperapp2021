@@ -134,6 +134,19 @@ $(function(){
   });
   // Wow Animaciones
   wowData();
+  // Incremento
+  extrasInput('#extras-cant-max-1', '#extras-cant-min-1', '#cantidad-ct-1');
+  // Card number
+  $('#credit-number').on('keypress change blur', function () {
+    $(this).val(function (index, value) {
+      return value.replace(new RegExp(/[^\d]/,'ig'), "").replace(/(.{4})/g, '$1 ');
+    });
+  });
+  $('#credit-ccv').on('keypress change blur', function () {
+    $(this).val(function (index, value) {
+      return value.replace(new RegExp(/[^\d]/,'ig'), "").replace(/(.{4})/g, '$1 ');
+    });
+  });
 });
 
 function wowData() {
@@ -147,6 +160,27 @@ function wowData() {
   setTimeout(function() {
     wow.init();
   }, 1000);
+}
+
+function extrasInput(id, idx, cant) {
+  var valor = $(cant).val();
+  var x = valor;
+  // console.log(valor + 'Personas');
+  $(id).click(function () {
+    $(cant).attr('value', ++x);
+    if($(cant).val() > 1) {
+      $(idx).removeClass('disabled');
+    }
+  });
+  $(idx).click(function () {
+    console.log($(cant).val());
+    if ($(cant).val() <= 1) {
+      // console.log('Aquí bloqueas');
+      $(idx).addClass('disabled');
+    } else {
+      $(cant).attr('value', --x);
+    }
+  });
 }
 
 

@@ -419,6 +419,15 @@ form {
       }
     }
   }
+  &--divider {
+    padding: 0; margin: 50px 0 15px; padding: 0 0 15px; border-bottom: 0.5px solid rgba($gris, 0.55);
+  }
+  & .cvv-details {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative; text-align: left; @include box-sizing(border-box);
+    & p {
+      margin: 0; padding: 0; @include fluid-type(12px, 14px, 320px, 1200px); color: $gris; font-family: 'Gotham-Light'; font-weight: 400;
+    }
+  }
 }
 
 .playImg {
@@ -431,12 +440,12 @@ form {
   }
 }
 .btnHero {
-  @include position(absolute, 58vw null null 5.5%); display: block; width: 250px; height: 40px; border-radius: 12px; line-height: 40px; text-align: center; border: none; background-color: $rojo; @include box-sizing(border-box); margin: 0 auto; padding: 0; color: $white; font-size: rem(15px); cursor: pointer; text-decoration: none; text-transform: uppercase; font-family: 'Gotham-Light'; font-weight: 800;
+  @include position(absolute, 69vw null null 17%); display: block; width: 32px; height: 32px; border-radius: 50%; line-height: 30px; text-align: center; border: 1px solid $rojo; background-color: transparent; @include box-sizing(border-box); margin: 0 auto; padding: 0; color: $rojo; font-size: rem(16px); cursor: pointer; text-decoration: none; @include transition(all 300ms ease);
   &:hover {
-    color: $white;
+    color: $white; background-color: $rojo;
   }
   @media all and (min-width: 768px) {
-    top: 33vw; left: 6.3%;
+    top: 33vw; left: 11.4%; width: 40px; height: 40px; line-height: 38px; font-size: rem(22px); 
   }
 }
 
@@ -693,4 +702,63 @@ form {
 }
 .embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
   @include position(absolute, 0 null 0 0); width: 100%; height: 100%; border: 0;
+}
+
+// Input incremento
+.inpInc {
+  width: 100%; height: auto; margin: 0; padding: 0; position: relative; @include displayFlex(flex, column, flex-start, flex-start, wrap);
+  &__inputs {
+    @include display(flex); @include flex-direction(row); @include align-items(center); margin: 0 0 10px;
+    & button {
+      display: inline-block; width: 25px; height: 25px; border: 0; background-color: $rojo; margin: 0; padding: 0; color: $white; line-height: 25px; font-size: rem(10px); cursor: pointer; border-radius: 6px;
+      &.disabled {
+        cursor: none; pointer-events: none; opacity: 0.50;
+      }
+    }
+    & .inpText {
+      color: $black; font-size: rem(16px); margin: 0 5px; height: auto;
+      & input {
+        display: inline-block; border: 0.5px solid $gris; padding: 0; margin: 0; font-size: rem(16px); width: 40px; height: 40px; line-height: 40px; text-align: center; border-radius: 50%; font-family: 'Gotham-Light'; font-weight: 400;
+      }
+      &__novisible {
+        margin: 0; padding: 0; display: none;
+      }
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+  @media all and (min-width: 400px) {
+    @include displayFlex(flex, row, flex-start, center, wrap);
+    &__inputs {
+       margin: 0 10px 0 0;
+    }
+  }
+  @media all and (min-width: 768px) {
+    &__inputs {
+       margin: 0 0 10px 0;
+    }
+  }
+  @media all and (min-width: 992px) {
+    &__inputs {
+       margin: 0 10px 0 0;
+    }
+  }
+}
+
+// Caja de precios
+.boxPrices {
+  width: 100%; height: auto; padding: 0 0 10px; margin: 0 0 10px; position: relative; @include box-sizing(border-box); text-align: right;
+  &__sub {
+    margin: 0 0 10px; padding: 0; color: $black; @include fluid-type(16px, 18px, 320px, 1200px); font-family: 'GothamMedium'; font-weight: 700; line-height: 1;
+    &--price {
+      margin: 0 0 20px; padding: 0; color: $gris; @include fluid-type(15px, 26px, 320px, 1200px); font-family: 'Gotham-Light'; font-weight: 400; line-height: 1;
+    }
+  }
+  &__tot {
+    margin: 0 0 10px; padding: 0; color: $black; @include fluid-type(16px, 20px, 320px, 1200px); font-family: 'GothamMedium'; font-weight: 700; line-height: 1;
+    &--price {
+      margin: 0; padding: 0; color: $rojo; @include fluid-type(16px, 30px, 320px, 1200px); font-family: 'GothamMedium'; font-weight: 500; line-height: 1;
+    }
+  }
 }

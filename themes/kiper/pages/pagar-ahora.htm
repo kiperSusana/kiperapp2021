@@ -4,7 +4,7 @@ layout = "layout"
 is_hidden = 0
 ==
 <section class="iniciaSec">
-	<form action="POST" name="frmProbar" id="frmProbar" action="">
+	<form action="POST" name="frmProbar" id="frmProbar" action="" autocomplete="off" novalidate>
 		<div class="ctFrm">
 			<div class="container">
 				<div class="row justify-content-center">
@@ -80,14 +80,80 @@ is_hidden = 0
 						</div>
 					</div><!-- end.col-* -->
 					<div class="col-12 col-md-10 col-lg-7">
-						<div class="frmInicia">
-							<div class="row g-3">
-								<div class="col-12 inputStyle">
+						<div class="frmInicia frmInicia--divider">
+							<div class="row">
+								
+								<div class="col-12 col-md-6 col-lg-4">
 									<label class="frmInicia__label">Número de usuarios</label>
-									<input type="number" class="form-control" min="1" value="1" />
+									<div class="inpInc">
+										<div class="inpInc__inputs">
+											<button type="button" id="extras-cant-min-1"><i class="fa fa-minus"></i></button>
+											<div class="inpText"><span class="inpText__novisible">Cantidad:</span> <input type="text" name="cantidad-ct-1" id="cantidad-ct-1" value="1" min="0" max="4" readonly></div>
+											<button type="button" id="extras-cant-max-1"><i class="fa fa-plus"></i></button>
+										</div><!-- end.inpInc__inputs -->
+									</div><!-- end.inpInc -->
 								</div>
+								<div class="col-12 col-md-6 col-lg-8">
+									<div class="boxPrices">
+										<p class="boxPrices__sub">Subtotal:</p>
+										<p class="boxPrices__sub boxPrices__sub--price">Sub Total:</p>
+										<p class="boxPrices__tot">Total:</p>
+										<p class="boxPrices__tot boxPrices__tot--price">$698.00</p>
+									</div>
+								</div>
+
 							</div><!-- end.row -->
 						</div><!-- end.frmInicia -->
+					</div><!-- end.col-* -->
+					<div class="col-12 col-md-10 col-lg-7">
+						<div class="frmInicia">
+							<div class="row g-3">
+								<div class="col-12">
+									<h2 class="frmInicia__title">Datos de tarjeta</h2>
+								</div>
+								<div class="col-12 inputStyle">
+									<input type="text" class="form-control" name="tarjeta_name" id="tarjeta_name" placeholder="Nombre Completo">
+								</div>
+								<div class="col-12 inputStyle">
+									<input type="text" pattern="[0-9]" class="form-control" name="credit-number" id="credit-number" placeholder="No. Tarjeta" maxlength="19">
+								</div>
+								<div class="col-6 inputStyle">
+									<select name="mescard" id="mescard" class="form-select required">
+										<option value="enero">Enero</option>
+										<option value="febrero">Febrero</option>
+										<option value="marzo">Marzo</option>
+										<option value="abril">Abril</option>
+										<option value="mayo">Maya</option>
+										<option value="junio">Junio</option>
+										<option value="julio">Julio</option>
+										<option value="agosto">Agosto</option>
+										<option value="septiembre">Septiembre</option>
+										<option value="octubre">Octubre</option>
+										<option value="noviembre">Noviembre</option>
+										<option value="diciembre">Diciembre</option>
+									</select>
+								</div>
+								<div class="col-6 inputStyle">
+									<select name="yearcard" id="yearcard" class="form-select required">
+										<option value="2021">2021</option>
+										<option value="2022">2022</option>
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
+										<option value="2025">2025</option>
+										<option value="2026">2026</option>
+										<option value="2027">2027</option>
+									</select>
+								</div>
+								<div class="col-6 col-md-4 inputStyle">
+									<input type="text" class="form-control" name="credit-ccv" id="credit-ccv" placeholder="CVV" maxlength="3">
+								</div>
+								<div class="col-6 col-md-8">
+									<div class="cvv-details">
+										<p>3 dígitos generalmente se encuentran<br>a un costado de la firma</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- end.frmDataBox -->
 					</div><!-- end.col-* -->
 					<div class="col-12 col-md-10 col-lg-7">
 						<input class="planesct__link" type="submit" class="btn btn-gral btnSubmit" value="Pagar" />  
