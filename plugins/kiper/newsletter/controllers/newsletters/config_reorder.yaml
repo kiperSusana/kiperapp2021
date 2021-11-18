@@ -1,0 +1,4 @@
+title: Newsletters
+modelClass: Kiper\Newsletter\Models\Newsletter
+toolbar:
+    buttons: reorder_toolbar

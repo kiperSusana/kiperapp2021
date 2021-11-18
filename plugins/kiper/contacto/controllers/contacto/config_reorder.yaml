@@ -1,0 +1,4 @@
+title: Contacto
+modelClass: Kiper\Contacto\Models\Contacto
+toolbar:
+    buttons: reorder_toolbar

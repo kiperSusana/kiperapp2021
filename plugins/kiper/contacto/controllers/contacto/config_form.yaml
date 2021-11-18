@@ -1,0 +1,10 @@
+name: Contacto
+form: $/kiper/contacto/models/contacto/fields.yaml
+modelClass: Kiper\Contacto\Models\Contacto
+defaultRedirect: kiper/contacto/contacto
+create:
+    redirect: 'kiper/contacto/contacto/update/:id'
+    redirectClose: kiper/contacto/contacto
+update:
+    redirect: kiper/contacto/contacto
+    redirectClose: kiper/contacto/contacto

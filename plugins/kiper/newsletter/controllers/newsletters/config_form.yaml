@@ -1,0 +1,11 @@
+name: Newsletters
+modelClass: Kiper\Newsletter\Models\Newsletter
+form: $/kiper/newsletter/models/newsletter/fields.yaml
+defaultRedirect: kiper/newsletter/newsletters
+create:
+    redirect: 'kiper/newsletter/newsletters/update/:id'
+    redirectClose: kiper/newsletter/newsletters
+update:
+    redirect: kiper/newsletter/newsletters
+    redirectClose: kiper/newsletter/newsletters
+preview: {  }

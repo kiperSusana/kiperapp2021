@@ -1,0 +1,22 @@
+fields:
+    nombre:
+        label: Nombre
+        span: auto
+        type: text
+    email:
+        label: 'Correo electrónico'
+        span: auto
+        type: text
+    telefono:
+        label: Teléfono
+        span: auto
+        type: text
+    negocio:
+        label: 'Tipo de Negocio'
+        span: auto
+        type: text
+    mensaje:
+        label: Mensaje
+        span: full
+        size: ''
+        type: textarea

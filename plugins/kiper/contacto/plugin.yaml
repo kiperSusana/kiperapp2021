@@ -1,0 +1,17 @@
+plugin:
+    name: 'kiper.contacto::lang.plugin.name'
+    description: 'kiper.contacto::lang.plugin.description'
+    author: kiper
+    icon: oc-icon-columns
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Contactos
+        url: kiper/contacto/contacto
+        icon: icon-list
+        permissions:
+            - contactos.admin
+permissions:
+    contactos.admin:
+        tab: 'kiper.contacto::lang.plugin.name'
+        label: 'Formulario Contacto'

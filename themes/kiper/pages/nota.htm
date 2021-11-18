@@ -6,6 +6,8 @@ is_hidden = 0
 [blogPost]
 slug = "{{ :slug }}"
 categoryPage = "blog-kiper"
+
+[frmNewsletter]
 ==
 <article class="bg-gen"> 
   <section class="blogSec">
@@ -36,15 +38,7 @@ categoryPage = "blog-kiper"
                     </div><!-- end.boxBlog -->
 
                     <hr>
-                    <div class="popularesCt__news">
-                      <h2>Únete a nuestro newsletter</h2>
-											<div class="formNews">
-                        <form action="">
-                          <input type="email" class="inputNews" required name="email" id="email" placeholder="Tu email">
-                          <input type="submit" class="inputBtn" value="Enviar">
-                        </form>
-                      </div>
-                    </div>
+                    {% component 'frmNewsletter' %}
                   </div><!-- end.popularesCt -->
 									
                 </div><!-- end.col-* -->

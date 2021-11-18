@@ -1,0 +1,12 @@
+title: Newsletters
+modelClass: Kiper\Newsletter\Models\Newsletter
+list: $/kiper/newsletter/models/newsletter/columns.yaml
+recordUrl: 'kiper/newsletter/newsletters/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

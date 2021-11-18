@@ -1,0 +1,5 @@
+fields:
+    email:
+        label: 'Correo Electrónico'
+        span: full
+        type: text

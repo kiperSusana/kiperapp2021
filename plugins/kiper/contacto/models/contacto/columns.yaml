@@ -1,0 +1,29 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    nombre:
+        label: Nombre
+        type: text
+        sortable: true
+    email:
+        label: Correo
+        type: text
+        sortable: true
+    telefono:
+        label: Teléfono
+        type: text
+        sortable: true
+    negocio:
+        label: Tipo
+        type: text
+    mensaje:
+        label: Mensjae
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+        searchable: true
+        sortable: true

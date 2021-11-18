@@ -1,0 +1,14 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    created_at:
+        label: created_at
+        type: datetime
+    email:
+        label: Correo
+        type: text
+        searchable: true
+        sortable: true

@@ -1,0 +1,17 @@
+plugin:
+    name: 'kiper.newsletter::lang.plugin.name'
+    description: 'kiper.newsletter::lang.plugin.description'
+    author: kiper
+    icon: oc-icon-list
+    homepage: ''
+permissions:
+    admin.newsletter:
+        tab: 'kiper.newsletter::lang.plugin.name'
+        label: 'Formulario Newsletter'
+navigation:
+    main-menu-item:
+        label: Newsletter
+        url: kiper/newsletter/newsletters
+        icon: icon-mail-forward
+        permissions:
+            - admin.newsletter

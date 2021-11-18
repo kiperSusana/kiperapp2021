@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	$(".error-msg").remove();
+	var errors = {{errorMsgs|json_encode()|raw}};
+	console.log(errors);
+	$.each(errors, function(name,msg){
+		
+		if (name == 'email'){
+			$('<div class="error-msg">' + msg + '</div>').insertAfter($('#email'));
+		}
+		/*else if (name== 'email') {
+			$('<div class="error-msg">' + msg + '</div>').insertAfter($('#emailc'));
+		} */
+		else {
+			$('<div class="error-msg">' + msg + '</div>').insertAfter($('input[name=' + name + ']'));	
+		}
+	})
+</script>
