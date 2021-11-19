@@ -440,12 +440,15 @@ form {
   }
 }
 .btnHero {
-  @include position(absolute, 69vw null null 17%); display: block; width: 32px; height: 32px; border-radius: 50%; line-height: 30px; text-align: center; border: 1px solid $rojo; background-color: transparent; @include box-sizing(border-box); margin: 0 auto; padding: 0; color: $rojo; font-size: rem(16px); cursor: pointer; text-decoration: none; @include transition(all 300ms ease);
+  @include position(absolute, 69vw null null 6.5%); display: block; width: auto; height: 32px; border-radius: 10px; line-height: 30px; text-align: center; border: 1px solid $rojo; background-color: transparent; @include box-sizing(border-box); margin: 0 auto; padding: 0 5px; color: $rojo; @include fluid-type(12px, 15px, 320px, 1200px); cursor: pointer; text-decoration: none; @include transition(all 300ms ease);
+  & i {
+    margin-left: 5px;
+  }
   &:hover {
     color: $white; background-color: $rojo;
   }
   @media all and (min-width: 768px) {
-    top: 33vw; left: 11.4%; width: 40px; height: 40px; line-height: 38px; font-size: rem(22px); 
+    top: 33vw; left: 7.2%; height: 40px; line-height: 38px; padding: 0 20px;
   }
 }
 

@@ -26,9 +26,12 @@
         }
         &.mainItem {
           & a {
-            margin: 0; padding: 5px 15px; color: $white; @include transition(all 300ms); @include fluid-type(13px, 14px, 320px, 1200px); background-color: $rojo; display: inline-block; width: auto; height: auto; text-transform: uppercase; border-radius: 12px; border: 1px solid $rojo;
+            margin: 0; padding: 5px 15px; color: $rojo; @include transition(all 300ms); @include fluid-type(12px, 13px, 320px, 1200px); background-color: $white; display: inline-block; width: auto; height: auto; border-radius: 12px; border: 1px solid $rojo; font-family: 'Gotham-Light'; font-weight: 800;
+            & i {
+              margin-left: 5px;
+            }
             &:hover {
-              color: $rojo; background-color: $white;
+              color: $white; background-color: $rojo;
             }
           }
         }
