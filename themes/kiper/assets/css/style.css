@@ -912,12 +912,12 @@ margin-top: 1vw;
   }
   .boxImg--left {
           /* left: 8%; */
-          left: 0;
+          left: -3%;
   }
   }
   .boxImg--right {
           /* right: 8%; */
-          right: 7.4%;
+          right: -7.4%;
   }
   .section_kiper{
           height: 428vw;
