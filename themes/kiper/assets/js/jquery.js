@@ -147,6 +147,12 @@ $(function(){
       return value.replace(new RegExp(/[^\d]/,'ig'), "").replace(/(.{4})/g, '$1 ');
     });
   });
+
+  $('[data-mobile]').click(function(e) {
+    e.preventDefault();
+    var dataMob = $(this).attr('data-mobile');
+    $(dataMob).toggle( "slow" );
+  });
 });
 
 function wowData() {
