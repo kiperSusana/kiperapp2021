@@ -324,7 +324,7 @@ width: 4vw;
 }
 .text_three_kiper{
   /* visibility: visible; */
-  display: block;
+  /* display: block; */
 position: absolute;
 left: 60.5%;
 text-align: left;
@@ -742,7 +742,7 @@ border: none;
 .desk_margin{
 margin-top: 1vw;   
 }
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
   
   .principal{height: 90vw;}
   .center{height: 14vw;}
@@ -913,7 +913,6 @@ margin-top: 1vw;
   .boxImg--left {
           /* left: 8%; */
           left: -3%;
-  }
   }
   .boxImg--right {
           /* right: 8%; */
