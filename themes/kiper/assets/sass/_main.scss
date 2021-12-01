@@ -44,6 +44,24 @@ $white: #ffffff;
 .wow {
   visibility: hidden; @include transform-origin(0 50%);
 }
+.fullwidth-page {
+  width: 100%; height: auto; padding: 80px 0 40px; margin: 0; position: relative; @include box-sizing(border-box);
+  & .rteText {
+    text-align: justify;
+    h1, h2, h3, h4, h5, h6 {
+      color: $negro; text-align: left; font-family: 'GothamMedium';
+    }
+    & p {
+      color: $negro; font-family: 'Gotham-Light'; font-weight: 600;      
+    }
+    & a {
+      color: $rojo; font-family: 'GothamMedium';
+    }
+  }
+  @media all and (min-width: 768px) {
+    padding: 60px 0 40px;
+  }
+}
 // Menu Mobile
 .cont-menu-mobile {
   @extend .overlayClass; background-color: rgba($rojo, 0.90); z-index: -1; overflow-y: auto;
