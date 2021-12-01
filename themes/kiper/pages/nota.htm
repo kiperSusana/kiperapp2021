@@ -8,7 +8,18 @@ slug = "{{ :slug }}"
 categoryPage = "blog-kiper"
 
 [frmNewsletter]
+
+[blogPosts blogPupulares]
+pageNumber = "{{ :page }}"
+categoryFilter = "populares"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog-kiper"
+postPage = "nota"
 ==
+{% set populares = blogPupulares.posts %}
+
 <article class="bg-gen"> 
   <section class="blogSec">
     <div class="blogSec__main">
@@ -26,17 +37,21 @@ categoryPage = "blog-kiper"
                     <h2>¡Hola!</h2>
                     <hr>
                     <h5>Post Populares</h5>
-
+                {% for popular in populares %}
                     <div class="boxBlog boxBlog--small">
+                  {% if popular.featured_images.count %}
                       <div class="boxBlog__image">
-                        <img src="{{ 'assets/img/imgprueba/image_grande_post.png'|theme }}" alt="Título">
-                          <a href="{{ ''|page }}" class="boxBlog__link">Leer más</a>
+                      {% for image in popular.featured_images %}
+                        <img src="{{ image.path }}" alt="{{ popular.title }}">
+                      {% endfor %}
+                        <a href="{{ popular.url }}" class="boxBlog__link">Leer más</a>
                       </div>
+                  {% endif %}
                       <div class="boxBlog__desc">
-                        <h4><a href="{{ ''|page }}"><?php the_title(); ?></a></h4>
+                        <h4><a href="{{ popular.url }}">{{popular.title}}</a></h4>
                       </div><!-- end.boxBlog__image -->
                     </div><!-- end.boxBlog -->
-
+                {% endfor %}
                     <hr>
                     {% component 'frmNewsletter' %}
                   </div><!-- end.popularesCt -->
