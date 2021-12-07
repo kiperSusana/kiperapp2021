@@ -233,7 +233,7 @@ $white: #ffffff;
       color: $gris; margin-bottom: 15px; font-size: rem(40px);
       // @include fluid-type(18px, 50px, 320px, 1200px);
       & .price-old {
-        font-size: rem(14px); color: $gris; text-decoration:line-through; display: block;
+        font-size: rem(14px); color: $gris; text-decoration:line-through; display: block; margin-bottom: 10px;
       }
       & .moneda {
         @include fluid-type(13px, 20px, 320px, 1200px); vertical-align: middle; margin-left: 6px;
