@@ -1,4 +1,42 @@
+// Funciones Generales
+var $menuMobile = $('#mm'),
+  $botnoMobile = $('#openMenuMobile'),
+  $dataAttr = $('[data-menu-expand]');
+function menuMobile() {
+  var elDato = $dataAttr.attr('data-menu-expand');
+  // console.log(elDato);
+  switch (elDato) {
+    case 'false':
+      $menuMobile.attr('data-menu-expand', true);
+      $botnoMobile.attr('data-menu-expand', true);
+      $('body').addClass('bloquear');
+      TweenMax.to($menuMobile, 0.3, { scale: 1.0, opacity: 1, ease: Power3.easeInOut, zIndex: 5, easeParams: [1.1, 0.7], force3D: true });
+      break;
+    case 'true':
+      $menuMobile.attr('data-menu-expand', false);
+      $botnoMobile.attr('data-menu-expand', false);
+      $('body').removeClass('bloquear');
+      TweenMax.to($menuMobile, 0.3, { scale: 1.2, opacity: 0, ease: Power3.easeInOut, zIndex: -1, easeParams: [1.1, 0.7], force3D: true });
+      break;
+    default:
+      break;
+  }
+}
+
 $(function(){
+  TweenMax.to($('#mm'), 0, { scale: 1.2, opacity: 0, zIndex: -1, force3D: true });
+
+  $('#contListMenu ul li a.link').on('click', function(e) {
+    // e.preventDefault();
+    var $mobileId = $('#mm'),
+      $btnId = $('#openMenuMobile');
+
+    $mobileId.attr('data-menu-expand', false);
+    $btnId.attr('data-menu-expand', false);
+    $('body').removeClass('bloquear');
+    TweenMax.to($mobileId, 0.3, { scale: 1.2, opacity: 0, ease: Power3.easeInOut, zIndex: -1, easeParams: [1.1, 0.7], force3D: true });
+  });
+
   $('.cuadro_dialogo').hide();
   $('.cuadro_dialogo').hide();
 		$('.globo').click(function () {
@@ -146,6 +184,12 @@ $(function(){
     $(this).val(function (index, value) {
       return value.replace(new RegExp(/[^\d]/,'ig'), "").replace(/(.{4})/g, '$1 ');
     });
+  });
+
+  $('[data-mobile]').click(function(e) {
+    e.preventDefault();
+    var dataMob = $(this).attr('data-mobile');
+    $(dataMob).toggle( "slow" );
   });
 });
 

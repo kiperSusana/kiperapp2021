@@ -26,9 +26,12 @@
         }
         &.mainItem {
           & a {
-            margin: 0; padding: 5px 15px; color: $white; @include transition(all 300ms); @include fluid-type(13px, 14px, 320px, 1200px); background-color: $rojo; display: inline-block; width: auto; height: auto; text-transform: uppercase; border-radius: 12px; border: 1px solid $rojo;
+            margin: 0; padding: 5px 15px; color: $rojo; @include transition(all 300ms); @include fluid-type(12px, 13px, 320px, 1200px); background-color: $white; display: inline-block; width: auto; height: auto; border-radius: 12px; border: 1px solid $rojo; font-family: 'Gotham-Light'; font-weight: 800;
+            & i {
+              margin-left: 5px;
+            }
             &:hover {
-              color: $rojo; background-color: $white;
+              color: $white; background-color: $rojo;
             }
           }
         }
@@ -40,12 +43,66 @@
   }
 }
 .btnHeader {
-  width: 100%; height: auto; padding: 0; margin: 0; text-align: right;
+  width: 100%; height: auto; padding: 0; margin: 0; text-align: right; @include displayFlex(flex, row, flex-end, center, wrap);
   &__link {
-    width: auto; height: 32px; padding: 0 20px; margin: 0; display: inline-block; line-height: 1; background: #E53F28; border-radius: 16px; color: $white; font-family: 'Gotham-Light'; font-weight: 800; text-decoration: none; text-transform: uppercase; text-align: center; border: 0; line-height: 32px; font-size: rem(13px);
+    width: auto; height: 32px; padding: 0 20px; margin: 0; display: inline-block; line-height: 1; background: #E53F28; border-radius: 16px; color: $white; font-family: 'Gotham-Light'; font-weight: 800; text-decoration: none; text-transform: uppercase; text-align: center; border: 0; line-height: 32px; font-size: rem(18px);
+    span {
+      display: none;
+    }
     &:hover,
     &:active {
       color: $white;
+    }
+    @media all and (min-width: 767px) {
+      font-size: rem(13px);
+      span {
+        display: inherit;
+      }
+    }
+  }
+  &__menu {
+    width: 40px; height: 40px; display: block; margin: 0 0 0 10px; padding: 0; position: relative; border: none; @include box-sizing(border-box); background-color: transparent; cursor: pointer;
+    span {
+      width: 15px; height: 2px; @include position(absolute, 50% 8px null null); background-color: $rojo; @include transform(translateY(-50%)); opacity: 1; @include transition(opacity 0.18s ease-in-out);
+    }
+    &:before, &:after {
+      content: ''; width: 25px; height: 2px; @include position(absolute, null null null 7px); background-color: $rojo; @include transition(transform 0.25s ease);
+    }
+    &:before {
+      top: 10px; @include transform(rotate(0deg));
+    }
+    &:after {
+      bottom: 10px; @include transform(rotate(0deg));
+    }
+    &:hover {
+      span { opacity: 0; }
+      &:before {
+        top: 19px; @include transform(rotate(45deg));
+      }
+      &:after {
+        bottom: 19px; @include transform(rotate(-45deg));
+      }
+    }
+    &[data-menu-expand="true"] {
+      span { opacity: 0; background-color: $rojo; }
+      &:before {
+        top: 19px; @include transform(rotate(45deg));background-color: $rojo;
+      }
+      &:after {
+        bottom: 19px; @include transform(rotate(-45deg));background-color: $rojo;
+      }
+    }
+    &[data-menu-expand="false"] {
+      span { opacity: 1; }
+      &:before {
+        top: 10px; @include transform(rotate(0deg));
+      }
+      &:after {
+        bottom: 10px; @include transform(rotate(0deg));
+      }
+    }
+    @media all and (min-width: 992px) {
+      display: none;
     }
   }
 }

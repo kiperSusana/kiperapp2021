@@ -324,7 +324,7 @@ width: 4vw;
 }
 .text_three_kiper{
   /* visibility: visible; */
-  display: block;
+  /* display: block; */
 position: absolute;
 left: 60.5%;
 text-align: left;
@@ -742,9 +742,9 @@ border: none;
 .desk_margin{
 margin-top: 1vw;   
 }
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
   
-  .principal{height: 80vw;}
+  .principal{height: 90vw;}
   .center{height: 14vw;}
   .fondo1{
           width: 170vw;
@@ -907,13 +907,16 @@ margin-top: 1vw;
           width: 35vw;
   } */
   .boxImg {
-          width: 35vw;
+          width: 60vw;
+          /* width: 35vw; */
   }
   .boxImg--left {
-          left: 8%;
+          /* left: 8%; */
+          left: -3%;
   }
   .boxImg--right {
-          right: 8%;
+          /* right: 8%; */
+          right: -7.4%;
   }
   .section_kiper{
           height: 428vw;

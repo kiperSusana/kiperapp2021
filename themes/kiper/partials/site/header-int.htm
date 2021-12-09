@@ -24,16 +24,30 @@ snippetName = "Header Interno"
               <li><a href="{{'inicio'|page}}/#section_three_kiper">Funciones</a></li>
               <li><a href="{{'inicio'|page}}/#content_planes">Planes</a></li>
               <li><a href="{{'blog-kiper'|page}}">Blog</a></li>
-              <!-- <li class="mainItem"><a href="{{'inicia-prueba'|page}}">Probar ahora</a></li> -->
+              <li class="mainItem"><a href="https://system.kiper.app"><span>Iniciar Sesión</span> <i class="fa fa-sign-in"></i></a></li>
             </ul><!-- end.ul -->
           </nav><!-- end.nav -->
         </div><!-- end.menumain -->
       </div><!-- end.col-* -->
-      <!-- <div class="col-8 d-block d-md-none">
+      <div class="col-8 d-block d-md-none">
         <div class="btnHeader">
-          <a class="btnHeader__link" href="{{'inicia-prueba'|page}}">Probar ahora</a>
+          <a class="btnHeader__link" href="https://system.kiper.app" target="_blank"><span>Iniciar Sesión</span> <i class="fa fa-sign-in"></i></a>
+          <button type="button" class="btnHeader__menu" id="openMenuMobile" onclick="menuMobile()" data-menu-expand="false"><span></span></button>
         </div>
-      </div> -->
+      </div>
     </div><!-- end.row -->
   </div><!-- end.container -->
 </header><!-- end.headerGen -->
+
+<!-- MenuMobile -->
+<div id="mm" class="cont-menu-mobile" data-menu-expand="false">
+  <div id="contListMenu" class="mnuContMob">
+    <ul>
+      <li><a href="{{'inicio'|page}}/#section_kiper">¿Qué es Kiper?</a></li>
+      <li><a href="{{'inicio'|page}}/#section_three_kiper">Funciones</a></li>
+      <li><a href="{{'inicio'|page}}/#content_planes">Planes</a></li>
+      <li><a href="{{'blog-kiper'|page}}">Blog</a></li>
+    </ul><!-- end.ul -->
+  </div>
+</div>
+<!-- end.MenuMobile -->

@@ -26,12 +26,83 @@ $white: #ffffff;
   @include display($disp); @include flex-direction($direc); @include justify-content($justify); @include align-items($items); @include flex-wrap($wrp);
 }
 
+// Extend Clases
+.overlayClass {
+  width: 100%; height: 100%; @include position(fixed, 0 null null 0); margin: 0; padding: 0;
+}
+.overlayClassAbs {
+  width: 100%; height: 100%; @include position(absolute, 0 null null 0); margin: 0; padding: 0;
+}
+.absImg {
+  @include position(absolute, 50% null null 50%); @include transform(translate(-50%, -50%));
+}
+
 // Main
 // .questionSec {
 //   height: auto!important;
 // }
 .wow {
   visibility: hidden; @include transform-origin(0 50%);
+}
+.fullwidth-page {
+  width: 100%; height: auto; padding: 80px 0 40px; margin: 0; position: relative; @include box-sizing(border-box);
+  & .rteText {
+    text-align: justify;
+    h1, h2, h3, h4, h5, h6 {
+      color: $negro; text-align: left; font-family: 'GothamMedium';
+    }
+    & p {
+      color: $negro; font-family: 'Gotham-Light'; font-weight: 600;      
+    }
+    & a {
+      color: $rojo; font-family: 'GothamMedium';
+    }
+  }
+  @media all and (min-width: 768px) {
+    padding: 60px 0 40px;
+  }
+}
+.content {
+  width: 100%; height: auto; position: relative; padding: 0; margin: 0; z-index: 3;
+}
+// Menu Mobile
+.cont-menu-mobile {
+  @extend .overlayClass; background-color: rgba($rojo, 0.90); z-index: -1; overflow-y: auto;
+  .mnuContMob {
+    width: 100%; height: auto; padding: 0; margin: 100px 0 0 0;
+    ul {
+      list-style-type: none; @include displayFlex(flex, column, center, center, nowrap); margin: 10px auto; padding: 0 0; width: 300px;
+      li {
+        list-style-type: none; width: 100%; height: auto; border-bottom: 1px solid rgba($white, 0.30);
+        a {
+          display: block; color: $white; text-transform: uppercase; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.0); text-align: center; @include transition(all 0.25s ease); font-family: 'GothamMedium'; font-weight: 400; text-decoration: none;
+          &.secondary-menu {
+            position: relative;
+            &:after {
+              content: '\f078'; font-family: 'fontAwesome'; width: 15px; height: 15px; font-size: rem(13px); @include position(absolute, 50% 5px null null); text-align: center; line-height: 15px; @include transform(translateY(-50%));
+            }
+          }
+          &:hover {
+            background-color: rgba(255,255,255,0.10);
+          }
+        }
+        & > .sub-menu {
+          display: none;
+          li {
+            a {
+              color: $gris2; margin: 0 0 0 0; padding: 0; font-size: rem(14px);
+              img {
+                width: 25px; height: auto;
+              }
+            }
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }
 .containerSlide {
   max-width: 100%!important; padding-right: 0!important; padding-left: 0!important;
@@ -149,7 +220,11 @@ $white: #ffffff;
   &__title {
     width: 100%; height: auto; padding: 10px 0; margin: 0; @include box-sizing(border-box); text-align: center; background-color: $rojo;
     & h3 {
-      color: $white; margin: 0; padding: 0; text-align: center; @include fluid-type(12px, 40px, 320px, 1200px); font-family: 'Gotham-Light'; font-weight: 700;
+      color: $white; margin: 0; padding: 0; text-align: center; font-family: 'Gotham-Light'; font-weight: 700; font-size: rem(30px);
+      // @include fluid-type(12px, 40px, 320px, 1200px);
+      @media all and (min-width: 768px) {
+        font-size: rem(40px);
+      }
     }
   }
   &__mensual {
@@ -158,22 +233,31 @@ $white: #ffffff;
   &__monto {
     width: 100%; height: auto; display: block; text-align: center; font-family: 'GothamMedium'; padding: 0; margin: 0; line-height: 1; @include transition(all 300ms ease);
     &--black {
-      color: $gris; margin-bottom: 15px; @include fluid-type(18px, 50px, 320px, 1200px);
+      color: $gris; margin-bottom: 15px; font-size: rem(40px);
+      // @include fluid-type(18px, 50px, 320px, 1200px);
       & .price-old {
-        font-size: rem(14px); color: $gris; text-decoration:line-through; display: block;
+        font-size: rem(14px); color: $gris; text-decoration:line-through; display: block; margin-bottom: 10px;
       }
       & .moneda {
         @include fluid-type(13px, 20px, 320px, 1200px); vertical-align: middle; margin-left: 6px;
       }
       @media all and (min-width: 992px) {
-        margin-bottom: 30px;
+        margin-bottom: 30px; font-size: rem(50px);
       }
     }
     &--red {
-      color: $rojo; @include fluid-type(18px, 70px, 320px, 1200px);
+      color: $rojo; font-size: rem(50px);
+      // @include fluid-type(18px, 70px, 320px, 1200px);
+      @media all and (min-width: 992px) {
+        font-size: rem(70px);
+      }
     }
     &.selPrice {
-      @include fluid-type(18px, 70px, 320px, 1200px); color: $rojo;
+      // @include fluid-type(18px, 70px, 320px, 1200px);
+      color: $rojo; font-size: rem(70px);
+      @media all and (min-width: 992px) {
+        font-size: rem(70px);
+      }
     }
   }
   &__usuario {
@@ -198,7 +282,7 @@ $white: #ffffff;
     }
   }
   &__benefitsEdit {
-    width: 100%; height: auto; padding: 0 20px; margin: 0 0 20px; position: relative; @include box-sizing(border-box);
+    width: 100%; height: auto; padding: 0 20px; margin: 0 0 20px; position: relative; @include box-sizing(border-box); display: none;
     & ul {
       padding: 0; margin: 0; @include display(flex); @include flex-direction(column); list-style-type: none;
       & li {
@@ -214,15 +298,22 @@ $white: #ffffff;
     @media all and (min-width: 576px) {
       // min-height: 565px;
     }
+    @media all and (min-width: 768px) {
+      display: block;
+      // min-height: 565px;
+    }
     @media all and (min-width: 992px) {
       // min-height: 785px;
     }
   }
   &__linkPlan {
-    color: $rojo; font-family: 'Gotham-Light'; font-weight: 600; text-decoration: none; cursor: pointer; @include transition(all 300ms ease); width: 100%; height: auto; padding: 0; margin: 0 0 10px; display: block; text-align: center;
+    color: $rojo; font-family: 'Gotham-Light'; font-weight: 600; text-decoration: none; cursor: pointer; @include transition(all 300ms ease); width: 100%; height: auto; padding: 0; margin: 0 0 20px; display: block; text-align: center;
     &:hover,
     &:active {
       color: $black;
+    }
+    @media all and (min-width: 768px) {
+      display: none;
     }
   }
   &__link {
@@ -247,7 +338,7 @@ $white: #ffffff;
       }
     }
     &--flex {
-      @include displayFlex(flex, column, flex-start, center, wrap);
+      @include displayFlex(flex, row, flex-start, center, wrap);
       @media all and (min-width: 640px) {
         @include flex-direction(row);
       }
@@ -440,12 +531,15 @@ form {
   }
 }
 .btnHero {
-  @include position(absolute, 69vw null null 17%); display: block; width: 32px; height: 32px; border-radius: 50%; line-height: 30px; text-align: center; border: 1px solid $rojo; background-color: transparent; @include box-sizing(border-box); margin: 0 auto; padding: 0; color: $rojo; font-size: rem(16px); cursor: pointer; text-decoration: none; @include transition(all 300ms ease);
+  @include position(absolute, 69vw null null 6.5%); display: block; width: auto; height: 32px; border-radius: 10px; line-height: 30px; text-align: center; border: 1px solid $rojo; background-color: transparent; @include box-sizing(border-box); margin: 0 auto; padding: 0 5px; color: $rojo; @include fluid-type(12px, 15px, 320px, 1200px); cursor: pointer; text-decoration: none; @include transition(all 300ms ease);
+  & i {
+    margin-left: 5px;
+  }
   &:hover {
     color: $white; background-color: $rojo;
   }
   @media all and (min-width: 768px) {
-    top: 33vw; left: 11.4%; width: 40px; height: 40px; line-height: 38px; font-size: rem(22px); 
+    top: 33vw; left: 7.2%; height: 40px; line-height: 38px; padding: 0 20px;
   }
 }
 
