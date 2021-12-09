@@ -1,5 +1,5 @@
-title = "Inicio"
-url = "/"
+title = "Inicio Prueba"
+url = "/inicio-prueba"
 layout = "layout"
 is_hidden = 0
 
@@ -20,44 +20,7 @@ is_hidden = 0
   <div class="content_form wow fadeIn" data-wow-delay="0.4s" data-wow-duration="0.6s">
     <span class="title_form wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.6s">Es tu momento</span>
     <span class="desc_form wow fadeInUp" data-wow-delay="1.4s" data-wow-duration="0.6s">Llena el siguiente formulario y en breve<br/>nos pondremos en contacto contigo.</span>
-    <div id="gracias">
-      <form class="form_contacto wow fadeIn" data-wow-delay="1.4s" data-wow-duration="0.6s" data-request="frmContacto::onAddItem" id="frmContacto" name="frmContacto">
-        <div class="conten_imput">
-            <p>
-              Nombre:<span class="naranja">*</span>
-              <input type="text" name="nombre" id="nombre" required>
-            </p>
-        </div>
-        <div class="conten_imput">
-            <p>
-              Mail:<span class="naranja">*</span>
-              <input type="email" name="email" id="email" required>
-            </p>
-        </div>
-        <div class="conten_imput">
-            <p>
-              Teléfono:
-              <input type="text" name="telefono" id="telefono" required>
-            </p>
-        </div>
-        <div class="conten_imput">
-            <p>
-              Tipo de negocio:<span class="naranja">*</span>
-              <input type="text" name="negocio" id="negocio" required>
-            </p>
-        </div>
-        <div class="conten_negocio">
-            <p>
-              Mensaje:<span class="naranja">*</span>
-              <textarea type="text" name="mensaje" id="mensaje" required></textarea>
-            </p>
-        </div>
-          <p>
-            <input id="envioDatos" class="button_submit" type="submit" value="ENVIAR">
-          </p>
-          <div id="frmContacto-errors" class="error"></div>
-       </form>
-    </div>
+    {% component 'frmContacto' %}
   </div>
   <img class="franja_form wow fadeInLeft" data-wow-delay="0.7s" data-wow-duration="0.5s" src="{{ 'assets/img/franja_uno.png'|theme }}">
 </section>
