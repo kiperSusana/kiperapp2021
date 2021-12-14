@@ -5,281 +5,209 @@ is_hidden = 0
 
 [frmContacto]
 ==
-<section class="principal">
-  <img class="fondo1 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="0.2s" src="{{ 'assets/img/bg_slider.svg'|theme }}" >
-  <img class="fon_kiper wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.3s" src="{{ 'assets/img/Pantalla_OK_KIPER.png'|theme }}" >
-  <span class="aumenta wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="0.3s">¡Aumenta <br/><span class="naranja">tus ventas</span><br/> exponencialmente!</span>
-  <span class="aumenta_movil">¡Aumenta <br/><span class="naranja">tus ventas</span><br/> exponencial<br>mente!</span>
-  <span class="herramienta wow fadeInDown" data-wow-delay="1s" data-wow-duration="0.3s">Somos la herramienta digital de ventas más fácil de usar.<br/><span class="simple">Así de <span class="naranja">simple.</span></span></span>
-  <a class="playImg" href="https://play.google.com/store/apps/details?id=com.concepthaus.kiper&hl=es_MX" target="_blank">
-    <img class="wow fadeInLeft" data-wow-delay="1.2s" data-wow-duration="0.3s" src="{{ 'assets/img/playStore.png'|theme }}">
-  </a>
-  <a class="btnHero wow fadeIn" data-wow-delay="1.8s" data-wow-duration="0.3s" href="#frmcontact">¡Comenzar ahora! <i class="fa fa-chevron-down"></i></a>
-</section>
-<section id=frmcontact class="section_formulario">
-  <div class="content_form wow fadeIn" data-wow-delay="0.4s" data-wow-duration="0.6s">
-    <span class="title_form wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.6s">Es tu momento</span>
-    <span class="desc_form wow fadeInUp" data-wow-delay="1.4s" data-wow-duration="0.6s">Llena el siguiente formulario y en breve<br/>nos pondremos en contacto contigo.</span>
-      {% component 'frmContacto' %}
-  </div>
-  <img class="franja_form wow fadeInLeft" data-wow-delay="0.7s" data-wow-duration="0.5s" src="{{ 'assets/img/franja_uno.png'|theme }}">
-</section>
-<section class="section_kiper" id="section_kiper">
-  <img class="franja_kiper wow fadeInRight" data-wow-delay="1s" data-wow-duration="0.5s" src="{{ 'assets/img/franja_2.png '|theme }}">
-  <img class="fondo_gris_kiper" src="{{ 'assets/img/vectores/figura_gris.svg'|theme }}">
-  <div class="what_kiper">
-    <!-- <img class="persona_laptop wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="0.3s" src="{{ 'assets/img/elementos/hobre_laptop.png'|theme }}"> -->
-    <div class="frameVideo">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PXB1q9mWvPg" allowfullscreen></iframe>
+
+<article class="gen-ct">
+  <section class="hero-sec">
+    <img class="fondo1 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="0.2s" src="{{ 'assets/img/bg_slider.svg'|theme }}" >
+    <img class="fon_kiper wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.3s" src="{{ 'assets/img/Pantalla_OK_KIPER.png'|theme }}" >
+    <div class="hero-sec__desc">
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-6 col-md-5 col-lg-5">
+            <h2 class="aumenta wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="0.3s">¡Aumenta<br><span class="naranja">tus ventas</span><br>exponencialmente!</h2>
+            <p class="herramienta wow fadeInDown" data-wow-delay="1s" data-wow-duration="0.3s">Somos la herramienta digital de ventas más fácil de usar.<br/><span class="simple">Así de <span class="naranja">simple.</span></span></p>
+            <div class="hero-sec__btns">
+              <a class="playImg" href="https://play.google.com/store/apps/details?id=com.concepthaus.kiper&hl=es_MX" target="_blank">
+                <img class="wow fadeInLeft" data-wow-delay="1.2s" data-wow-duration="0.3s" src="{{ 'assets/img/playStore.png'|theme }}">
+              </a>
+              <a class="btnHero wow fadeIn" data-wow-delay="1.8s" data-wow-duration="0.3s" href="#frmcontact">¡Comenzar ahora! <i class="fa fa-chevron-down"></i></a>
+            </div>
+          </div><!-- end.col-.* -->
+        </div><!-- end.row -->
+      </div><!-- end.container -->
+    </div><!-- end.hero-sec__desc -->
+  </section><!-- end.section -->
+  
+  <section class="principal" style="display: none;">
+    <img class="fondo1 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="0.2s" src="{{ 'assets/img/bg_slider.svg'|theme }}" >
+    <img class="fon_kiper wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.3s" src="{{ 'assets/img/Pantalla_OK_KIPER.png'|theme }}" >
+    <span class="aumenta wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="0.3s">¡Aumenta <br/><span class="naranja">tus ventas</span><br/> exponencialmente!</span>
+    <span class="aumenta_movil">¡Aumenta <br/><span class="naranja">tus ventas</span><br/> exponencial<br>mente!</span>
+    <span class="herramienta wow fadeInDown" data-wow-delay="1s" data-wow-duration="0.3s">Somos la herramienta digital de ventas más fácil de usar.<br/><span class="simple">Así de <span class="naranja">simple.</span></span></span>
+    <a class="playImg" href="https://play.google.com/store/apps/details?id=com.concepthaus.kiper&hl=es_MX" target="_blank">
+      <img class="wow fadeInLeft" data-wow-delay="1.2s" data-wow-duration="0.3s" src="{{ 'assets/img/playStore.png'|theme }}">
+    </a>
+    <a class="btnHero wow fadeIn" data-wow-delay="1.8s" data-wow-duration="0.3s" href="#frmcontact">¡Comenzar ahora! <i class="fa fa-chevron-down"></i></a>
+  </section>
+  <section id=frmcontact class="section_formulario">
+    <div class="content_form wow fadeIn" data-wow-delay="0.4s" data-wow-duration="0.6s">
+      <span class="title_form wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.6s">Es tu momento</span>
+      <span class="desc_form wow fadeInUp" data-wow-delay="1.4s" data-wow-duration="0.6s">Llena el siguiente formulario y en breve<br/>nos pondremos en contacto contigo.</span>
+      <div id="gracias">
+        <form class="form_contacto wow fadeIn" data-wow-delay="1.4s" data-wow-duration="0.6s" data-request="frmContacto::onAddItem" id="frmContacto" name="frmContacto">
+          <div class="conten_imput">
+              <p>
+                Nombre:<span class="naranja">*</span>
+                <input type="text" name="nombre" id="nombre" required>
+              </p>
+          </div>
+          <div class="conten_imput">
+              <p>
+                Mail:<span class="naranja">*</span>
+                <input type="email" name="email" id="email" required>
+              </p>
+          </div>
+          <div class="conten_imput">
+              <p>
+                Teléfono:
+                <input type="text" name="telefono" id="telefono" required>
+              </p>
+          </div>
+          <div class="conten_imput">
+              <p>
+                Tipo de negocio:<span class="naranja">*</span>
+                <input type="text" name="negocio" id="negocio" required>
+              </p>
+          </div>
+          <div class="conten_negocio">
+              <p>
+                Mensaje:<span class="naranja">*</span>
+                <textarea type="text" name="mensaje" id="mensaje" required></textarea>
+              </p>
+          </div>
+            <p>
+              <input id="envioDatos" class="button_submit" type="submit" value="ENVIAR">
+            </p>
+            <div id="frmContacto-errors" class="error"></div>
+         </form>
       </div>
     </div>
-    <span class="texto_what_kiper wow fadeIn" data-wow-delay="1.5s" data-wow-duration="0.5s">¿Qué es <br><span class="naranja">Kiper?</span></span>
-    <span class="description_kiper wow fadeIn" data-wow-delay="1.8s" data-wow-duration="0.5s">Kiper es la nueva herramienta para <span class="naranja_negrita">gestionar tus ventas</span>  y dar seguimiento inmediato <span class="naranja_negrita">a tus clientes y prospectos.</span></span>
-  </div>
-  <div class="section_two_kiper">
-    <span class="texto_two_kiper wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="0.5s">Vende mucho más<br/>sólo siendo<br/><span class="naranja"> más organizado</span></span>
-    <span class="texto_two_kiper_movil">Vende mucho más<br/>sólo siendo<br/><span class="naranja">más organizado</span></span>
-    <span class="description_two_kiper wow fadeIn" data-wow-delay="0.6s" data-wow-duration="0.6s">Con Kiper lleva un <span class="naranja_negrita">control de tus campañas digitales</span>, contacta de la manera más efectiva a tus prospectos, monitorea su seguimiento puntual y <span class="naranja_negrita">conoce a detalle cuál de tus colaboradores genera más ingresos</span>, entre muchas cosas más.</span>
-    <span class="description_two_kiper_movil">Con Kiper lleva un <span class="naranja_negrita">control de tus campañas digitales</span>,<br>contacta de la manera más efectiva a tus prospectos,<br> monitorea su seguimiento puntual y <span class="naranja_negrita">conoce a detalle<br>cuál de tus colaboradores genera más ingresos</span>, entre muchas cosas más.</span>
-    <img class="ico_tres wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.6s" src="{{ 'assets/img/bg_box_colors.svg'|theme }}">
-  </div>
-  <div class="section_three_kiper" id="section_three_kiper">
-    <div class="boxImg boxImg--left scene-3">
-      <img class="wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/bg_scene.png'|theme }}">
-      <img class="wow fadeIn" data-wow-delay="0.9s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/img_2.png'|theme }}">
-      <img class="wow bounceIn" data-wow-delay="2s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/img_1.png'|theme }}">
-      <img class="wow bounceIn" data-wow-delay="2.2s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/img_3.png'|theme }}">
+    <img class="franja_form wow fadeInLeft" data-wow-delay="0.7s" data-wow-duration="0.5s" src="{{ 'assets/img/franja_uno.png'|theme }}">
+  </section>
+  <section class="section_kiper" id="section_kiper">
+    <img class="franja_kiper wow fadeInRight" data-wow-delay="1s" data-wow-duration="0.5s" src="{{ 'assets/img/franja_2.png '|theme }}">
+    <img class="fondo_gris_kiper" src="{{ 'assets/img/vectores/figura_gris.svg'|theme }}">
+    <div class="what_kiper">
+      <!-- <img class="persona_laptop wow fadeInLeft" data-wow-delay="0.2s" data-wow-duration="0.3s" src="{{ 'assets/img/elementos/hobre_laptop.png'|theme }}"> -->
+      <div class="frameVideo">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PXB1q9mWvPg" allowfullscreen></iframe>
+        </div>
+      </div>
+      <span class="texto_what_kiper wow fadeIn" data-wow-delay="1.5s" data-wow-duration="0.5s">¿Qué es <br><span class="naranja">Kiper?</span></span>
+      <span class="description_kiper wow fadeIn" data-wow-delay="1.8s" data-wow-duration="0.5s">Kiper es la nueva herramienta para <span class="naranja_negrita">gestionar tus ventas</span>  y dar seguimiento inmediato <span class="naranja_negrita">a tus clientes y prospectos.</span></span>
     </div>
-    <img class="ico_one wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/concentra_icon.svg'|theme }}">
-    <span class="text_three_kiper wow fadeInRight" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Concentra</span> todo en un solo lugar. Recibe automáticamente clientes de tus campañas digitales, regístralos manualmente o impórtalos desde Excel.</span>
-    <span class="text_three_kiper_movil"><span class="negrita">Concentra<br></span> todo en un solo lugar. Recibe automáticamente clientes de tus campañas digitales, regístralos manualmente o impórtalos desde Excel.</span>
-    <!-- <img class="ico_two" src="/img/vectores/multiple_franja.svg"> -->
-  </div>
-  <div class="section_contacta_kiper">
-    <img class="ico_three wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/comment_globe.svg'|theme }}">
-    <span class="contacta_clientes wow fadeInLeft" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita_t">Contacta</span> a tus clientes, prospectos y colaboradores cuando quieras, estés donde estés.<span class="negrita2"> ¡Amarás nuestra app móvil!</span> </span>
-    <span class="contacta_clientes_movil"><span class="negrita_t">Contacta<br></span> a tus clientes, prospectos y colaboradores cuando quieras, estés donde estés.<span class="negrita2"> ¡Amarás nuestra app móvil!</span> </span>
-    <div class="boxImg boxImg--right scene-4">
-      <img class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/bg_scene.png'|theme }}">
-      <img class="wow fadeInLeft" data-wow-delay="0.9s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/img_1.png'|theme }}">
-      <img class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/img_2.png'|theme }}">
-      <img class="wow fadeInLeft" data-wow-delay="1.2s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/img_3.png'|theme }}">
+    <div class="section_two_kiper">
+      <span class="texto_two_kiper wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="0.5s">Vende mucho más<br/>sólo siendo<br/><span class="naranja"> más organizado</span></span>
+      <span class="texto_two_kiper_movil">Vende mucho más<br/>sólo siendo<br/><span class="naranja">más organizado</span></span>
+      <span class="description_two_kiper wow fadeIn" data-wow-delay="0.6s" data-wow-duration="0.6s">Con Kiper lleva un <span class="naranja_negrita">control de tus campañas digitales</span>, contacta de la manera más efectiva a tus prospectos, monitorea su seguimiento puntual y <span class="naranja_negrita">conoce a detalle cuál de tus colaboradores genera más ingresos</span>, entre muchas cosas más.</span>
+      <span class="description_two_kiper_movil">Con Kiper lleva un <span class="naranja_negrita">control de tus campañas digitales</span>,<br>contacta de la manera más efectiva a tus prospectos,<br> monitorea su seguimiento puntual y <span class="naranja_negrita">conoce a detalle<br>cuál de tus colaboradores genera más ingresos</span>, entre muchas cosas más.</span>
+      <img class="ico_tres wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.6s" src="{{ 'assets/img/bg_box_colors.svg'|theme }}">
     </div>
-  </div>
-  <div class="section_administra_kiper">
-    <div class="boxImg boxImg--left scene-1">
-      <img class="wow fadeIn" data-wow-delay="0.6s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_1/bg_scene.png'|theme }}">
-      <img class="wow fadeIn" data-wow-delay="0.9s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_1/img_1.png'|theme }}">
-      <img class="wow bounceIn" data-wow-delay="1.4s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_1/img_2.png'|theme }}">
+    <div class="section_three_kiper" id="section_three_kiper">
+      <div class="boxImg boxImg--left scene-3">
+        <img class="wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/bg_scene.png'|theme }}">
+        <img class="wow fadeIn" data-wow-delay="0.9s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/img_2.png'|theme }}">
+        <img class="wow bounceIn" data-wow-delay="2s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/img_1.png'|theme }}">
+        <img class="wow bounceIn" data-wow-delay="2.2s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_3/img_3.png'|theme }}">
+      </div>
+      <img class="ico_one wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/concentra_icon.svg'|theme }}">
+      <span class="text_three_kiper wow fadeInRight" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Concentra</span> todo en un solo lugar. Recibe automáticamente clientes de tus campañas digitales, regístralos manualmente o impórtalos desde Excel.</span>
+      <span class="text_three_kiper_movil"><span class="negrita">Concentra<br></span> todo en un solo lugar. Recibe automáticamente clientes de tus campañas digitales, regístralos manualmente o impórtalos desde Excel.</span>
+      <!-- <img class="ico_two" src="/img/vectores/multiple_franja.svg"> -->
     </div>
-    <img class="ico_one wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/vectores/administra.svg'|theme }}">
-    <span class="text_three_kiper wow fadeInRight" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Administra</span> la información de tus clientes y prospectos, revisa su estatus y dales junto con tu equipo la mejor atención y seguimiento.</span>
-    <span class="text_three_kiper_movil"><span class="negrita">Administra<br></span> la información de tus clientes y prospectos, revisa su estatus y dales junto con tu equipo la mejor atención y seguimiento.</span>
-  </div>
-
-  <div class="section_comunica_kiper">
-    <img class="ico_four wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/comunica_icon.svg'|theme }}">
-    <p class="text_three_kiper_two wow fadeInLeft" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Comunica</span> las acciones de tu empresa creando campañas de e-mail marketing. <span class="negrita2">¡Es muy fácil y puedes diseñarlas tú mismo!</span></p>
-    <p class="text_three_kiper_two_movil"><span class="negrita">Comunica</span> las acciones de tu empresa creando campañas de e-mail marketing. <span class="negrita2">¡Es muy fácil y puedes diseñarlas tú mismo!</span></p>
-    <div class="boxImg boxImg--right scene-2">
-      <img class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/bg_scene_1.png'|theme }}">
-      <img class="wow fadeIn" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/bg_scene_2.png'|theme }}">
-      <img class="wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_1.png'|theme }}">
-      <img class="wow fadeInRight" data-wow-delay="1.2s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_2.png'|theme }}">
-      <img class="wow fadeInRight" data-wow-delay="1.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_3.png'|theme }}">
-      <img class="wow bounceIn" data-wow-delay="2.2s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_4.png'|theme }}">
+    <div class="section_contacta_kiper">
+      <img class="ico_three wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/comment_globe.svg'|theme }}">
+      <span class="contacta_clientes wow fadeInLeft" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita_t">Contacta</span> a tus clientes, prospectos y colaboradores cuando quieras, estés donde estés.<span class="negrita2"> ¡Amarás nuestra app móvil!</span> </span>
+      <span class="contacta_clientes_movil"><span class="negrita_t">Contacta<br></span> a tus clientes, prospectos y colaboradores cuando quieras, estés donde estés.<span class="negrita2"> ¡Amarás nuestra app móvil!</span> </span>
+      <div class="boxImg boxImg--right scene-4">
+        <img class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/bg_scene.png'|theme }}">
+        <img class="wow fadeInLeft" data-wow-delay="0.9s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/img_1.png'|theme }}">
+        <img class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/img_2.png'|theme }}">
+        <img class="wow fadeInLeft" data-wow-delay="1.2s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_4/img_3.png'|theme }}">
+      </div>
     </div>
-  </div>
-  <div class="section_concentra_kiper">
-    <div class="boxImg boxImg--left scene-5">
-      <img class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/bg_scene_1.png'|theme }}">
-      <img class="wow fadeIn" data-wow-delay="0.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/img_1.png'|theme }}">
-      <img class="wow fadeInLeft" data-wow-delay="1.0s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/bg_scene_2.png'|theme }}">
-      <img class="wow bounceIn" data-wow-delay="2.0s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/img_2.png'|theme }}">
+    <div class="section_administra_kiper">
+      <div class="boxImg boxImg--left scene-1">
+        <img class="wow fadeIn" data-wow-delay="0.6s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_1/bg_scene.png'|theme }}">
+        <img class="wow fadeIn" data-wow-delay="0.9s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_1/img_1.png'|theme }}">
+        <img class="wow bounceIn" data-wow-delay="1.4s" data-wow-duration="0.8s" src="{{ 'assets/img/servicios/scene_1/img_2.png'|theme }}">
+      </div>
+      <img class="ico_one wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/vectores/administra.svg'|theme }}">
+      <span class="text_three_kiper wow fadeInRight" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Administra</span> la información de tus clientes y prospectos, revisa su estatus y dales junto con tu equipo la mejor atención y seguimiento.</span>
+      <span class="text_three_kiper_movil"><span class="negrita">Administra<br></span> la información de tus clientes y prospectos, revisa su estatus y dales junto con tu equipo la mejor atención y seguimiento.</span>
     </div>
-    <img class="ico_one wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/alianza_icon.svg'|theme }}">
-    <span class="text_three_kiper wow fadeInRight" |data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Analiza</span> a partir de nuestras estadísticas y decide el rumbo de tu negocio a través del análisis de tus finanzas. Optimiza tus esfuerzos digitales, ¡tenemos muchos tips para ti!</span>
-    <span class="text_three_kiper_movil"><span class="negrita">Analiza<br></span> a partir de nuestras estadísticas y decide el rumbo de tu negocio a través del análisis de tus finanzas. Optimiza tus esfuerzos digitales, ¡tenemos muchos tips para ti!</span>
-    <img class="ico_two analiza" src="{{ 'assets/img/vectores/multiple_franja.svg'|theme }}">
-  </div>
-  <div class="section_personaliza_kiper">
-    <img class="ico_four wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/vectores/uim_toggle-off.svg'|theme }}">
-    <span class="text_three_kiper_two wow fadeInLeft" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Personaliza</span> Kiper estratégicamente y crea alertas con recordatorios para que nada se te pase.</span>
-    <span class="text_three_kiper_two_movil"><span class="negrita">Personaliza<br></span> Kiper estratégicamente y crea alertas con recordatorios para que nada se te pase.</span>
-    <div class="boxImg boxImg--right scene-6">
-      <img class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/bg_scene.png'|theme }}">
-      <img class="wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/bg_scene_2.png'|theme }}">
-      <img class="wow fadeIn" data-wow-delay="1.0s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_1.png'|theme }}">
-      <img class="wow bounceIn" data-wow-delay="1.9s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_2.png'|theme }}">
-      <img class="wow fadeIn" data-wow-delay="2.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_3.png'|theme }}">
-      <img class="wow fadeIn" data-wow-delay="2.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_4.png'|theme }}">
+  
+    <div class="section_comunica_kiper">
+      <img class="ico_four wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/comunica_icon.svg'|theme }}">
+      <p class="text_three_kiper_two wow fadeInLeft" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Comunica</span> las acciones de tu empresa creando campañas de e-mail marketing. <span class="negrita2">¡Es muy fácil y puedes diseñarlas tú mismo!</span></p>
+      <p class="text_three_kiper_two_movil"><span class="negrita">Comunica</span> las acciones de tu empresa creando campañas de e-mail marketing. <span class="negrita2">¡Es muy fácil y puedes diseñarlas tú mismo!</span></p>
+      <div class="boxImg boxImg--right scene-2">
+        <img class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/bg_scene_1.png'|theme }}">
+        <img class="wow fadeIn" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/bg_scene_2.png'|theme }}">
+        <img class="wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_1.png'|theme }}">
+        <img class="wow fadeInRight" data-wow-delay="1.2s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_2.png'|theme }}">
+        <img class="wow fadeInRight" data-wow-delay="1.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_3.png'|theme }}">
+        <img class="wow bounceIn" data-wow-delay="2.2s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_2/img_4.png'|theme }}">
+      </div>
     </div>
-  </div>
-  <img class="fondo_gris_kiper_dos" src="{{ 'assets/img/vectores/Vector.svg'|theme }}">
-</section>
-<section id="content_planes" class="questionSec section_pregunta">
-  <span class="content_pregunta wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="0.6s">¿Estás listo para aumentar <br/>tus ventas de la  manera 
-  <span class="naranja wow fadeInDown" data-wow-delay="0.8s" data-wow-duration="0.6s">más simple?</span></span>
-  <!-- <span class="content_planes wow fadeIn" data-wow-delay="1s" data-wow-duration="0.6s" id="content_planes">Planes</span></span>-->
-  <span class="content_pregunta_movil">¿Estás listo para <br/>gestionar tus planes <br/>de la  manera<br/> 
-  <span class="naranja">más simple?</span></span>
-  <!-- <br>
-  <hr class="hr_movil">-->
-  <!--<span class="content_planes">Planes</span></span>-->
-</section>
-<!-- 
-<section class="planesct">
-  <div class="containerSlide container">
-    <div class="row">
-      <div class="col-12">
-        <div class="planesct__car wow fadeInDown" data-wow-delay="1.4s" data-wow-duration="0.6s">
-          <div class="slidePlanes">
-
-            <div>
-              <div class="planesct__plan planesct__plan--negro">
-                <div class="planesct__title">
-                  <h3>Plan Standard</h3>
-                </div><! -- end.planesct__title -- >
-                <div class="planesct__usuario">
-                  <span class="planesct__mensual">Mensual / Usuario</span>
-                  <span class="planesct__monto planesct__monto--black">$349</span>
-                  <span class="planesct__mensual">Anual / Usuario</span>
-                  <span class="planesct__monto planesct__monto--red">$290</span>
-                </div><! -- end.planesct__usuario -- >
-                <div class="planesct__beneficios">
-                  <ul>
-                    <li>Ingreso manual de prospectos</li>
-                    <li>Integración de campañas digitales</li>
-                    <li>Generación de oportunidades</li>
-                    <li>Enlistamiento de oportunidades<br>(Funelización)</li>
-                    <li>Personalización de funeles</li>
-                    <li>Fichas de prospecto</li>
-                    <li>Historial de seguimiento por prospecto</li>
-                    <li>Asignación de prospectos al equipo</li>
-                    <li>Almacenamiento de archivos <br>por prospecto</li>
-                    <li>Análisis de estadisticas en tiempo real</li>
-                    <li>Etiquetado de oportunidades</li>
-                    <li>Acceso a la aplicación móvil iOS y Android</li>
-                  </ul><! -- end.ul -->
-                <!--</div> end.planesct__beneficios - ->
-                <div class="planesct__btns">
-                  <a class="planesct__link" href="{{ 'inicia-prueba'|page }}">CONTRATAR PLAN</a>
-                  <p><small>Y recibe una prueba gratis de un mes sin necesidad de una tarjeta de crédito</small></p>
-                </div><! -- end.planesct__btns -- >
-              </div><! -- end.planesct__plan -- >
-            </div><! -- end.itemSlide - ->
-            <div>
-              <div class="planesct__plan planesct__plan--rojo">
-                <div class="planesct__title">
-                  <h3>Plan Pro</h3>
-                </div><! -- end.planesct__title -- >
-                <div class="planesct__usuario">
-                  <span class="planesct__mensual">Mensual / Usuario</span>
-                  <span class="planesct__monto planesct__monto--black">$549</span>
-                  <span class="planesct__mensual">Anual / Usuario</span>
-                  <span class="planesct__monto planesct__monto--red">$450</span>
-                </div><! -- end.planesct__usuario -- >
-                <div class="planesct__beneficios">
-                  <ul>
-                    <li>Ingreso manual de prospectos</li>
-                    <li>Integración de campañas digitales</li>
-                    <li>Generación de oportunidades</li>
-                    <li>Enlistamiento de oportunidades<br>(Funelización)</li>
-                    <li>Personalización de funeles</li>
-                    <li>Fichas de prospecto</li>
-                    <li>Historial de seguimiento por prospecto</li>
-                    <li>Asignación de prospectos al equipo</li>
-                    <li>Almacenamiento de archivos <br>por prospecto</li>
-                    <li>Análisis de estadisticas en tiempo real</li>
-                    <li>Etiquetado de oportunidades</li>
-                    <li>Envío masivo de correos con<br>segmentación</li>
-                    <li>Creación de alertas</li>
-                    <li>Integración de Gmail y Whatsapp</li>
-                    <li>Acceso a la aplicación móvil iOS y Android</li>
-                  </ul><! -- end.ul - ->
-                </div><! -- end.planesct__beneficios - ->
-                <div class="planesct__btns">
-                  <a class="planesct__link" href="#frmcontact">Contáctanos</a>
-                  <p><small>PRÓXIMAMENTE</small></p>
-                </div><!- - end.planesct__btns - ->
-              </div><! -- end.planesct__plan - ->
-            </div><!- - end.itemSlide - ->
-            <div>
-              <div class="planesct__plan planesct__plan--azul">
-                <div class="planesct__title">
-                  <h3>Plan Prime</h3>
-                </div><! -- end.planesct__title -- >
-                <div class="planesct__usuario">
-                  <span class="planesct__mensual">Mensual / Usuario</span>
-                  <span class="planesct__monto planesct__monto--black">$949</span>
-                  <span class="planesct__mensual">Anual / Usuario</span>
-                  <span class="planesct__monto planesct__monto--red">$880</span>
-                </div><! -- end.planesct__usuario -- >
-                <div class="planesct__beneficios">
-                  <ul>
-                    <li>Ingreso manual de prospectos</li>
-                    <li>Integración de campañas digitales</li>
-                    <li>Generación de oportunidades</li>
-                    <li>Enlistamiento de oportunidades<br>(Funelización)</li>
-                    <li>Personalización de funeles</li>
-                    <li>Fichas de prospecto</li>
-                    <li>Historial de seguimiento por prospecto</li>
-                    <li>Asignación de prospectos al equipo</li>
-                    <li>Almacenamiento de archivos <br>por prospecto</li>
-                    <li>Análisis de estadisticas en tiempo real</li>
-                    <li>Etiquetado de oportunidades</li>
-                    <li>Envío masivo de correos con<br>segmentación</li>
-                    <li>Creación de alertas</li>
-                    <li>Integración de Gmail y Whatsapp</li>
-                    <li>Grabación de llamadas entrantes</li>
-                    <li>Acceso a la aplicación móvil iOS y Android</li>
-                  </ul><! -- end.ul -- >
-                </div><! -- end.planesct__beneficios -- >
-                <div class="planesct__btns">
-                  <a class="planesct__link" href="#frmcontact">Contáctanos</a>
-                  <p><small>PRÓXIMAMENTE</small></p>
-                </div><! -- end.planesct__btns -- >
-              </div><! -- end.planesct__plan -- >
-            </div><! -- end.itemSlide -- >
-
-          </div><! -- end.slidePlanes -- >
-        </div><! -- end.planesct__car -- >
-        <div class="planesct__divider"></div>
-      </div><! -- end.col-* -- >
-    </div><! -- end.row - ->
-  </div><! -- end.container - ->
-</section><! -- end.planes -->
-
-<div class="planesct">
-  <div class="container">
-    <div class="row justify-content-center">
-      
-      <div class="col-12 col-md-10 col-lg-7">
-        <div class="planesct__noslide">
-          <div class="row">
-            <div class="col-12 colsPad">
-
-              <div class="planesct__only planesct__only--black">
-                <div class="planesct__title">
-                  <h3>Plan Standard</h3>
-                </div><!-- end.planesct__title -->
-                <div class="planesct__box">
+    <div class="section_concentra_kiper">
+      <div class="boxImg boxImg--left scene-5">
+        <img class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/bg_scene_1.png'|theme }}">
+        <img class="wow fadeIn" data-wow-delay="0.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/img_1.png'|theme }}">
+        <img class="wow fadeInLeft" data-wow-delay="1.0s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/bg_scene_2.png'|theme }}">
+        <img class="wow bounceIn" data-wow-delay="2.0s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_5/img_2.png'|theme }}">
+      </div>
+      <img class="ico_one wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/alianza_icon.svg'|theme }}">
+      <span class="text_three_kiper wow fadeInRight" |data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Analiza</span> a partir de nuestras estadísticas y decide el rumbo de tu negocio a través del análisis de tus finanzas. Optimiza tus esfuerzos digitales, ¡tenemos muchos tips para ti!</span>
+      <span class="text_three_kiper_movil"><span class="negrita">Analiza<br></span> a partir de nuestras estadísticas y decide el rumbo de tu negocio a través del análisis de tus finanzas. Optimiza tus esfuerzos digitales, ¡tenemos muchos tips para ti!</span>
+      <img class="ico_two analiza" src="{{ 'assets/img/vectores/multiple_franja.svg'|theme }}">
+    </div>
+    <div class="section_personaliza_kiper">
+      <img class="ico_four wow bounceIn" data-wow-delay="1s" data-wow-duration="0.8s" src="{{ 'assets/img/vectores/uim_toggle-off.svg'|theme }}">
+      <span class="text_three_kiper_two wow fadeInLeft" data-wow-delay="1.5s" data-wow-duration="0.8s"><span class="negrita">Personaliza</span> Kiper estratégicamente y crea alertas con recordatorios para que nada se te pase.</span>
+      <span class="text_three_kiper_two_movil"><span class="negrita">Personaliza<br></span> Kiper estratégicamente y crea alertas con recordatorios para que nada se te pase.</span>
+      <div class="boxImg boxImg--right scene-6">
+        <img class="wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/bg_scene.png'|theme }}">
+        <img class="wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/bg_scene_2.png'|theme }}">
+        <img class="wow fadeIn" data-wow-delay="1.0s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_1.png'|theme }}">
+        <img class="wow bounceIn" data-wow-delay="1.9s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_2.png'|theme }}">
+        <img class="wow fadeIn" data-wow-delay="2.8s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_3.png'|theme }}">
+        <img class="wow fadeIn" data-wow-delay="2.4s" data-wow-duration="1s" src="{{ 'assets/img/servicios/scene_6/img_4.png'|theme }}">
+      </div>
+    </div>
+    <img class="fondo_gris_kiper_dos" src="{{ 'assets/img/vectores/Vector.svg'|theme }}">
+  </section>
+  <section id="content_planes" class="questionSec section_pregunta">
+    <span class="content_pregunta wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="0.6s">¿Estás listo para aumentar <br/>tus ventas de la  manera 
+    <span class="naranja wow fadeInDown" data-wow-delay="0.8s" data-wow-duration="0.6s">más simple?</span></span>
+    <!-- <span class="content_planes wow fadeIn" data-wow-delay="1s" data-wow-duration="0.6s" id="content_planes">Planes</span></span>-->
+    <span class="content_pregunta_movil">¿Estás listo para <br/>gestionar tus planes <br/>de la  manera<br/> 
+    <span class="naranja">más simple?</span></span>
+    <!-- <br>
+    <hr class="hr_movil">-->
+    <!--<span class="content_planes">Planes</span></span>-->
+  </section>
+  <!-- 
+  <section class="planesct">
+    <div class="containerSlide container">
+      <div class="row">
+        <div class="col-12">
+          <div class="planesct__car wow fadeInDown" data-wow-delay="1.4s" data-wow-duration="0.6s">
+            <div class="slidePlanes">
+  
+              <div>
+                <div class="planesct__plan planesct__plan--negro">
+                  <div class="planesct__title">
+                    <h3>Plan Standard</h3>
+                  </div><! -- end.planesct__title -- >
                   <div class="planesct__usuario">
-                    <p class="planesct__mensual">Mensual / Usuario</p>
-                    <h4 data-price="opcion-1" class="planesct__monto planesct__monto--black">
-                      <small class="price-old">$500 MXN</small>
-                      $349<small class="moneda">MXN</small>
-                    </h4>
-                    <p class="planesct__mensual">Anual / Usuario</p>
-                    <h4 data-price="opcion-2" class="planesct__monto planesct__monto--black">
-                      $290<small class="moneda">MXN</small>
-                    </h4>
-                  </div><!-- end.planesct__usuario -->
-                </div>
-                <div class="planesct__box">
-                  <a href="#" data-mobile="#planStandar" class="planesct__linkPlan">Ver más <i class="fa fa-chevron-down"></i></a>
-                  <div id="planStandar" class="planesct__benefitsEdit">
+                    <span class="planesct__mensual">Mensual / Usuario</span>
+                    <span class="planesct__monto planesct__monto--black">$349</span>
+                    <span class="planesct__mensual">Anual / Usuario</span>
+                    <span class="planesct__monto planesct__monto--red">$290</span>
+                  </div><! -- end.planesct__usuario -- >
+                  <div class="planesct__beneficios">
                     <ul>
                       <li>Ingreso manual de prospectos</li>
                       <li>Integración de campañas digitales</li>
@@ -292,53 +220,246 @@ is_hidden = 0
                       <li>Almacenamiento de archivos <br>por prospecto</li>
                       <li>Análisis de estadisticas en tiempo real</li>
                       <li>Etiquetado de oportunidades</li>
-                      <li>20 alertas al mes por usuario*</li>
-                      <li>Acceso a nuestras apps móviles</li>
-                    </ul><!-- end.ul -->
-                  </div><!-- end.planesct__beneficios -->
-                </div><!-- end.planesct__box -->
-                <div class="planesct__btns planesct__btns--flex">
-                  <div class="planesct__linkbox">
-                    <input type="radio" class="btn-check" name="planes" id="opcion-1" data-check-btn value="Plan Mensual">
-                    <label class="planesct__link" for="opcion-1">Plan Mensual</label>
-                  </div><!-- end.planesct__linkbox -->
-                  <div class="planesct__linkbox">
-                    <input type="radio" class="btn-check" name="planes" id="opcion-2" data-check-btn value="Plan Anual" checked>
-                    <label class="planesct__link" for="opcion-2">Plan Anual</label>
-                  </div><!-- end.planesct__linkbox -->
-                </div><!-- end.planesct__btns -->
-              </div><!-- end.planesct__plan -->
-
-            </div><!-- end.col-* -->
-          </div><!-- end.row -->
-        </div><!-- end.planesct__car -->
-      </div><!-- end.col-* -->
-    </div><!-- end.row -->
-  </div><!-- end.container -->
-
+                      <li>Acceso a la aplicación móvil iOS y Android</li>
+                    </ul><! -- end.ul -->
+                  <!--</div> end.planesct__beneficios - ->
+                  <div class="planesct__btns">
+                    <a class="planesct__link" href="{{ 'inicia-prueba'|page }}">CONTRATAR PLAN</a>
+                    <p><small>Y recibe una prueba gratis de un mes sin necesidad de una tarjeta de crédito</small></p>
+                  </div><! -- end.planesct__btns -- >
+                </div><! -- end.planesct__plan -- >
+              </div><! -- end.itemSlide - ->
+              <div>
+                <div class="planesct__plan planesct__plan--rojo">
+                  <div class="planesct__title">
+                    <h3>Plan Pro</h3>
+                  </div><! -- end.planesct__title -- >
+                  <div class="planesct__usuario">
+                    <span class="planesct__mensual">Mensual / Usuario</span>
+                    <span class="planesct__monto planesct__monto--black">$549</span>
+                    <span class="planesct__mensual">Anual / Usuario</span>
+                    <span class="planesct__monto planesct__monto--red">$450</span>
+                  </div><! -- end.planesct__usuario -- >
+                  <div class="planesct__beneficios">
+                    <ul>
+                      <li>Ingreso manual de prospectos</li>
+                      <li>Integración de campañas digitales</li>
+                      <li>Generación de oportunidades</li>
+                      <li>Enlistamiento de oportunidades<br>(Funelización)</li>
+                      <li>Personalización de funeles</li>
+                      <li>Fichas de prospecto</li>
+                      <li>Historial de seguimiento por prospecto</li>
+                      <li>Asignación de prospectos al equipo</li>
+                      <li>Almacenamiento de archivos <br>por prospecto</li>
+                      <li>Análisis de estadisticas en tiempo real</li>
+                      <li>Etiquetado de oportunidades</li>
+                      <li>Envío masivo de correos con<br>segmentación</li>
+                      <li>Creación de alertas</li>
+                      <li>Integración de Gmail y Whatsapp</li>
+                      <li>Acceso a la aplicación móvil iOS y Android</li>
+                    </ul><! -- end.ul - ->
+                  </div><! -- end.planesct__beneficios - ->
+                  <div class="planesct__btns">
+                    <a class="planesct__link" href="#frmcontact">Contáctanos</a>
+                    <p><small>PRÓXIMAMENTE</small></p>
+                  </div><!- - end.planesct__btns - ->
+                </div><! -- end.planesct__plan - ->
+              </div><!- - end.itemSlide - ->
+              <div>
+                <div class="planesct__plan planesct__plan--azul">
+                  <div class="planesct__title">
+                    <h3>Plan Prime</h3>
+                  </div><! -- end.planesct__title -- >
+                  <div class="planesct__usuario">
+                    <span class="planesct__mensual">Mensual / Usuario</span>
+                    <span class="planesct__monto planesct__monto--black">$949</span>
+                    <span class="planesct__mensual">Anual / Usuario</span>
+                    <span class="planesct__monto planesct__monto--red">$880</span>
+                  </div><! -- end.planesct__usuario -- >
+                  <div class="planesct__beneficios">
+                    <ul>
+                      <li>Ingreso manual de prospectos</li>
+                      <li>Integración de campañas digitales</li>
+                      <li>Generación de oportunidades</li>
+                      <li>Enlistamiento de oportunidades<br>(Funelización)</li>
+                      <li>Personalización de funeles</li>
+                      <li>Fichas de prospecto</li>
+                      <li>Historial de seguimiento por prospecto</li>
+                      <li>Asignación de prospectos al equipo</li>
+                      <li>Almacenamiento de archivos <br>por prospecto</li>
+                      <li>Análisis de estadisticas en tiempo real</li>
+                      <li>Etiquetado de oportunidades</li>
+                      <li>Envío masivo de correos con<br>segmentación</li>
+                      <li>Creación de alertas</li>
+                      <li>Integración de Gmail y Whatsapp</li>
+                      <li>Grabación de llamadas entrantes</li>
+                      <li>Acceso a la aplicación móvil iOS y Android</li>
+                    </ul><! -- end.ul -- >
+                  </div><! -- end.planesct__beneficios -- >
+                  <div class="planesct__btns">
+                    <a class="planesct__link" href="#frmcontact">Contáctanos</a>
+                    <p><small>PRÓXIMAMENTE</small></p>
+                  </div><! -- end.planesct__btns -- >
+                </div><! -- end.planesct__plan -- >
+              </div><! -- end.itemSlide -- >
   
-</div><!-- end.planesct -->
+            </div><! -- end.slidePlanes -- >
+          </div><! -- end.planesct__car -- >
+          <div class="planesct__divider"></div>
+        </div><! -- end.col-* -- >
+      </div><! -- end.row - ->
+    </div><! -- end.container - ->
+  </section><! -- end.planes -->
+  
+  <div class="planesct">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-12 col-md-10 col-lg-6">
+          <div class="planesct__noslide">
+            <div class="row">
+              <div class="col-12 colsPad">
+  
+                <div class="planesct__only planesct__only--black">
+                  <div class="planesct__title">
+                    <h3>Plan Standard</h3>
+                  </div><!-- end.planesct__title -->
+                  <div class="planesct__box">
+                    <div class="planesct__usuario">
+                      <p class="planesct__mensual">Mensual / Usuario</p>
+                      <h4 data-price="opcion-1" class="planesct__monto planesct__monto--black">
+                        <small class="price-old">$500 MXN</small>
+                        $349<small class="moneda">MXN</small>
+                      </h4>
+                      <p class="planesct__mensual">Anual / Usuario</p>
+                      <h4 data-price="opcion-2" class="planesct__monto planesct__monto--black">
+                        $290<small class="moneda">MXN</small>
+                      </h4>
+                    </div><!-- end.planesct__usuario -->
+                  </div>
+                  <div class="planesct__box">
+                    <a href="#" data-mobile="#planStandar" class="planesct__linkPlan">Ver más <i class="fa fa-chevron-down"></i></a>
+                    <div id="planStandar" class="planesct__benefitsEdit">
+                      <ul>
+                        <li>Ingreso manual de prospectos</li>
+                        <li>Integración de campañas digitales</li>
+                        <li>Generación de oportunidades</li>
+                        <li>Enlistamiento de oportunidades<br>(Funelización)</li>
+                        <li>Personalización de funeles</li>
+                        <li>Fichas de prospecto</li>
+                        <li>Historial de seguimiento por prospecto</li>
+                        <li>Asignación de prospectos al equipo</li>
+                        <li>Almacenamiento de archivos <br>por prospecto</li>
+                        <li>Análisis de estadisticas en tiempo real</li>
+                        <li>Etiquetado de oportunidades</li>
+                        <li>20 alertas al mes por usuario*</li>
+                        <li>Acceso a nuestras apps móviles</li>
+                      </ul><!-- end.ul -->
+                    </div><!-- end.planesct__beneficios -->
+                  </div><!-- end.planesct__box -->
+                  <div class="planesct__btns planesct__btns--flex">
+                    <div class="planesct__linkbox">
+                      <input type="radio" class="btn-check" name="planes" id="opcion-1" data-check-btn value="Plan Mensual">
+                      <label class="planesct__link" for="opcion-1">Plan Mensual</label>
+                    </div><!-- end.planesct__linkbox -->
+                    <div class="planesct__linkbox">
+                      <input type="radio" class="btn-check" name="planes" id="opcion-2" data-check-btn value="Plan Anual" checked>
+                      <label class="planesct__link" for="opcion-2">Plan Anual</label>
+                    </div><!-- end.planesct__linkbox -->
+                  </div><!-- end.planesct__btns -->
+                </div><!-- end.planesct__plan -->
+  
+              </div><!-- end.col-* -->
+            </div><!-- end.row -->
+          </div><!-- end.planesct__car -->
+        </div><!-- end.col-* -->
+        <div class="col-12 col-md-10 col-lg-6">
+          <div class="planesct__noslide">
+            <div class="row">
+              <div class="col-12 colsPad">
+  
+                <div class="planesct__only planesct__only--black">
+                  <div class="planesct__title">
+                    <h3>Plan Pro</h3>
+                  </div><!-- end.planesct__title -->
+                  <div class="planesct__box">
+                    <div class="planesct__usuario">
+                      <p class="planesct__mensual">Mensual / Usuario</p>
+                      <h4 data-price="opcion-1" class="planesct__monto planesct__monto--black">
+                        <small class="price-old">$500 MXN</small>
+                        $349<small class="moneda">MXN</small>
+                      </h4>
+                      <p class="planesct__mensual">Anual / Usuario</p>
+                      <h4 data-price="opcion-2" class="planesct__monto planesct__monto--black">
+                        $290<small class="moneda">MXN</small>
+                      </h4>
+                    </div><!-- end.planesct__usuario -->
+                  </div>
+                  <div class="planesct__box">
+                    <a href="#" data-mobile="#planStandar" class="planesct__linkPlan">Ver más <i class="fa fa-chevron-down"></i></a>
+                    <div id="planStandar" class="planesct__benefitsEdit">
+                      <ul>
+                        <li>Ingreso manual de prospectos</li>
+                        <li>Integración de campañas digitales</li>
+                        <li>Generación de oportunidades</li>
+                        <li>Enlistamiento de oportunidades<br>(Funelización)</li>
+                        <li>Personalización de funeles</li>
+                        <li>Fichas de prospecto</li>
+                        <li>Historial de seguimiento por prospecto</li>
+                        <li>Asignación de prospectos al equipo</li>
+                        <li>Almacenamiento de archivos <br>por prospecto</li>
+                        <li>Análisis de estadisticas en tiempo real</li>
+                        <li>Etiquetado de oportunidades</li>
+                        <li>20 alertas al mes por usuario*</li>
+                        <li>Acceso a nuestras apps móviles</li>
+                      </ul><!-- end.ul -->
+                    </div><!-- end.planesct__beneficios -->
+                  </div><!-- end.planesct__box -->
+                  <div class="planesct__btns planesct__btns--flex">
+                    <div class="planesct__linkbox">
+                      <input type="radio" class="btn-check" name="planes" id="opcion-1" data-check-btn value="Plan Mensual">
+                      <label class="planesct__link" for="opcion-1">Plan Mensual</label>
+                    </div><!-- end.planesct__linkbox -->
+                    <div class="planesct__linkbox">
+                      <input type="radio" class="btn-check" name="planes" id="opcion-2" data-check-btn value="Plan Anual" checked>
+                      <label class="planesct__link" for="opcion-2">Plan Anual</label>
+                    </div><!-- end.planesct__linkbox -->
+                  </div><!-- end.planesct__btns -->
+                </div><!-- end.planesct__plan -->
+  
+              </div><!-- end.col-* -->
+            </div><!-- end.row -->
+          </div><!-- end.planesct__car -->
+        </div><!-- end.col-* -->
+      </div><!-- end.row -->
+    </div><!-- end.container -->
+  
+    
+  </div><!-- end.planesct -->
+  
+  <section class="content_prueba">
+    <div class="celular_prueba">
+      <img class="img_fon_prueba wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/elementos/Mobile_KIPER-2 1.png'|theme }}">
+    </div>
+    <div class="content_inicia_prueba">
+      <span class="inicia_prueba wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1s">Haz que el éxito 
+        <br/>de tu empresa 
+        <br/>sea exponencial.
+        <br/><span class="naranja">Inicia tu prueba 
+        <br/>ahora.</span>
+  
+      </span>
+      <span class="inicia_prueba_movil">Haz que el éxito 
+        <br/>de tu empresa 
+        <br/>sea exponencial.
+        <br/><span class="naranja">Inicia tu prueba 
+        <br/>ahora.</span>
+  
+      </span>
+      <a href="#frmcontact"><div class="buton_iniciar wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">COMENZAR AHORA</div>
+        <div class="buton_iniciar_movil">COMENZAR AHORA</div></a>
+    </div>
+  </section>
 
-<section class="content_prueba">
-  <div class="celular_prueba">
-    <img class="img_fon_prueba wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s" src="{{ 'assets/img/elementos/Mobile_KIPER-2 1.png'|theme }}">
-  </div>
-  <div class="content_inicia_prueba">
-    <span class="inicia_prueba wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1s">Haz que el éxito 
-      <br/>de tu empresa 
-      <br/>sea exponencial.
-      <br/><span class="naranja">Inicia tu prueba 
-      <br/>ahora.</span>
 
-    </span>
-    <span class="inicia_prueba_movil">Haz que el éxito 
-      <br/>de tu empresa 
-      <br/>sea exponencial.
-      <br/><span class="naranja">Inicia tu prueba 
-      <br/>ahora.</span>
-
-    </span>
-    <a href="#frmcontact"><div class="buton_iniciar wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">COMENZAR AHORA</div>
-      <div class="buton_iniciar_movil">COMENZAR AHORA</div></a>
-  </div>
-</section>
+</article><!-- end.gen-ct -->

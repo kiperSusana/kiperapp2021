@@ -33,29 +33,29 @@ display: none;
 }
 .aumenta{
 /* visibility: visible; */
-display: block;
-position: absolute;
+/* display: block;
+position: absolute; */
 /* left: 0%; */
-text-align: left;
-left: 7vw;
-top: 5vw;
+/* text-align: left; */
+/* left: 7vw; */
+/* top: 5vw; */
 font-family: 'GothamMedium';
 font-weight: 700;
-font-size: 3.5vw;
-line-height: 4.5vw;
+/* font-size: 3.5vw;
+line-height: 4.5vw; */
 }
 .naranja{
 color: #E53F28;
 }
 
 .herramienta{
-position: absolute;
+/* position: absolute;
 left: 7.2%;
 top: 19vw;
-text-align: start;
+text-align: start; */
 font-family: 'Gotham-Light';
-font-size: 1.7vw;
-width: 25%;
+/* font-size: 1.7vw; */
+/* width: 25%; */
 font-weight: 800;
 font-style: normal;
 }
@@ -771,14 +771,14 @@ margin-top: 1vw;
   }
   .aumenta{
        /* visibility: hidden; */
-       display: none;
+       /* display: none; */
   }
   .herramienta{
-          position: absolute;
+          /* position: absolute;
           left: 7.2%;
-          top: 38vw;
-          font-size: 3.4vw;
-          width: 40%;
+          top: 38vw; */
+          /* font-size: 3.4vw; */
+          /* width: 40%; */
   }
   .section_formulario{height: 150vw;}
   .content_form{

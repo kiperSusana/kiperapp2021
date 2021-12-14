@@ -65,6 +65,51 @@ $white: #ffffff;
 .content {
   width: 100%; height: auto; position: relative; padding: 0; margin: 0; z-index: 3;
 }
+article {
+  width: 100%; height: auto; padding: 0; margin: 0; position: relative;
+  &.bg-gen {
+    margin-top: 60px;
+  }
+}
+.hero-sec {
+  @include position(relative, null null null null); width: 100%; height: 388px; padding: 0; margin: 0; z-index: 1; overflow: hidden;
+  &__desc {
+    @include position(absolute, 30px null null 0); width: 100%; height: auto; padding: 0; margin: 0; z-index: 2;
+    // & img {
+    //   width: 100%; max-width: 50px; height: auto; padding: 0; margin: 0 auto 20px; display: block;
+    // }
+    & h2 {
+      margin: 0 0 20px 0; padding: 0; text-align: left; @include fluid-type(20px, 50px, 320px, 1200px); text-shadow: 0px 4px 4px rgba($black, 0.25); line-height: 1.2;
+    }
+    & p {
+      margin: 0; padding: 0; text-align: left; @include fluid-type(15px, 24px, 320px, 1200px);
+    }
+    @media all and (min-width: 480px) {
+      top: 40px;
+    }
+    @media all and (min-width: 576px) {
+      top: 87px;
+    }
+  }
+  &__btns {
+    width: 100%; height: auto; padding: 0; margin: 20px 0 0; position: relative; @include box-sizing(border-box); @include displayFlex(flex, column, flex-start, flex-start, wrap);
+  }
+  @media all and (min-width: 480px) {
+    height: 430px;
+  }
+  @media all and (min-width: 576px) {
+    height: 490px;
+  }
+  @media all and (min-width: 640px) {
+    height: 500px;
+  }
+  @media all and (min-width: 768px) {
+    height: 540px;
+  }
+  @media all and (min-width: 1200px) {
+    height: 590px;
+  }
+}
 // Menu Mobile
 .cont-menu-mobile {
   @extend .overlayClass; background-color: rgba($rojo, 0.90); z-index: -1; overflow-y: auto;
@@ -522,16 +567,18 @@ form {
 }
 
 .playImg {
-  @include position(absolute, 58vw null null 5.5%); display: block; width: 100%; max-width: 100px; height: auto; padding: 0; margin: 0; text-decoration: none;
+  // @include position(absolute, 58vw null null 5.5%);
+  display: block; width: 100px; height: auto; padding: 0; margin: 0 0 10px; text-decoration: none;
   & img {
     width: 100%; height: auto; padding: 0; margin: 0; border: 0; display: block;
   }
   @media all and (min-width: 768px) {
-    max-width: 190px; top: 27vw; left: 6.3%;
+    width: 150px;
   }
 }
 .btnHero {
-  @include position(absolute, 69vw null null 6.5%); display: block; width: auto; height: 32px; border-radius: 10px; line-height: 30px; text-align: center; border: 1px solid $rojo; background-color: transparent; @include box-sizing(border-box); margin: 0 auto; padding: 0 5px; color: $rojo; @include fluid-type(12px, 15px, 320px, 1200px); cursor: pointer; text-decoration: none; @include transition(all 300ms ease);
+  // @include position(absolute, 69vw null null 6.5%);
+  display: block; width: auto; height: 32px; border-radius: 10px; line-height: 30px; text-align: center; border: 1px solid $rojo; background-color: transparent; @include box-sizing(border-box); margin: 0 auto 0 0; padding: 0 5px; color: $rojo; @include fluid-type(12px, 15px, 320px, 1200px); cursor: pointer; text-decoration: none; @include transition(all 300ms ease);
   & i {
     margin-left: 5px;
   }
@@ -539,7 +586,7 @@ form {
     color: $white; background-color: $rojo;
   }
   @media all and (min-width: 768px) {
-    top: 33vw; left: 7.2%; height: 40px; line-height: 38px; padding: 0 20px;
+    height: 40px; line-height: 38px; padding: 0 20px;
   }
 }
 
@@ -853,6 +900,45 @@ form {
     margin: 0 0 10px; padding: 0; color: $black; @include fluid-type(16px, 20px, 320px, 1200px); font-family: 'GothamMedium'; font-weight: 700; line-height: 1;
     &--price {
       margin: 0; padding: 0; color: $rojo; @include fluid-type(16px, 30px, 320px, 1200px); font-family: 'GothamMedium'; font-weight: 500; line-height: 1;
+    }
+  }
+}
+
+// Paginador Main
+.paginadorCont {
+  width: 100%; height: auto; padding: 0; margin: 0 0 20px 0; position: relative; @include box-sizing(border-box);
+  & .pagination {
+    margin-bottom: 10px;
+  }
+  & .page-item.disabled .page-link {
+    background-color: transparent; border: none; opacity: 0.40;
+  }
+  & .page-item {
+    margin: 0 8px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  & .resultNav {
+    text-align: center; @include fluid-type(11px, 13px, 320px, 1200px); margin: 0; padding: 0; font-family: 'Gotham-Light'; font-weight: 500;
+  }
+  // Paginador button
+  & .page-link {
+    padding: 0; border: none; margin: 0; background-color: transparent!important; width: 25px; height: 25px; text-align: center; background-position: center; background-repeat: no-repeat; background-size: 100%; line-height: 25px; text-decoration: none; color: $gris; font-size: rem(14px); @include transition(all 300ms); font-family: 'GothamMedium'; font-weight: 700; outline: 0;
+    &.page--prev {
+      text-indent: -9999px; font-size: 0;
+    }
+    &.page--next {
+      text-indent: -9999px; font-size: 0;
+    }
+    &.active {
+      color: $rojo;
+      &:hover {
+        color: $negro;
+      }
+    }
+    &:hover {
+      color: $gris;
     }
   }
 }
